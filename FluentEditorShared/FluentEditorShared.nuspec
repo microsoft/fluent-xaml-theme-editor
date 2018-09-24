@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+    <metadata>
+        <id>FluentEditorShared</id>
+        <version>1.0.0</version>
+        <title>FluentEditorShared</title>
+        <authors>FluentXD</authors>
+        <owners>Microsoft</owners>
+        <licenseUrl>https://github.com/Microsoft/fluent-xaml-theme-editor/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/Microsoft/fluent-xaml-theme-editor</projectUrl>
+        <iconUrl>http://microsoft.com</iconUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <description>Shared code used by the FluentXD prototyping team.</description>
+        <releaseNotes></releaseNotes>
+        <copyright>Copyright 2018</copyright>
+        <tags>Internal</tags>
+    </metadata>
+    <files>
+        <file src="bin\Release\FluentEditorShared**" target="lib\uap10.0" />
+    </files>
+</package>

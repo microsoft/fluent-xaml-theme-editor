@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{42A312EF-7C4A-4661-A684-DB14E40A2A90}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FluentEditorShared</RootNamespace>
+    <AssemblyName>FluentEditorShared</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17744.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17744.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+    <GenerateLibraryLayout>true</GenerateLibraryLayout>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateLibraryLayout>true</GenerateLibraryLayout>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <LangVersion>latest</LangVersion>
+    <GenerateLibraryLayout>true</GenerateLibraryLayout>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <GenerateLibraryLayout>true</GenerateLibraryLayout>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <LangVersion>latest</LangVersion>
+    <GenerateLibraryLayout>true</GenerateLibraryLayout>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <GenerateLibraryLayout>true</GenerateLibraryLayout>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <LangVersion>latest</LangVersion>
+    <GenerateLibraryLayout>true</GenerateLibraryLayout>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <GenerateLibraryLayout>true</GenerateLibraryLayout>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AnimAttachedProperties.cs" />
+    <Compile Include="ColorPalette\ColorPalette.cs" />
+    <Compile Include="ColorPalette\ColorPaletteEditor.cs" />
+    <Compile Include="ColorPalette\ColorPaletteEntry.cs" />
+    <Compile Include="ColorPalette\ColorPaletteEntryEditor.cs" />
+    <Compile Include="ColorPalette\ContrastColorWrapper.cs" />
+    <Compile Include="ColorPalette\ContrastListItem.cs" />
+    <Compile Include="ColorPalette\EditableColorPaletteEntry.cs" />
+    <Compile Include="ColorPalette\ExpandedColorPaletteEntryEditor.xaml.cs">
+      <DependentUpon>ExpandedColorPaletteEntryEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ColorPalette\IColorPalette.cs" />
+    <Compile Include="ColorPalette\IColorPaletteEntry.cs" />
+    <Compile Include="Converters.cs" />
+    <Compile Include="DependencyContainer\DependencyContainer.cs" />
+    <Compile Include="DependencyContainer\IDependencyContainer.cs" />
+    <Compile Include="FluentEditorSharedResources.xaml.cs">
+      <DependentUpon>FluentEditorSharedResources.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\BoolEditor.cs" />
+    <Compile Include="Editors\ColorEditor.cs" />
+    <Compile Include="Editors\DoubleEditor.cs" />
+    <Compile Include="Editors\EnumEditor.cs" />
+    <Compile Include="Editors\EnumSelectionAdapter.cs" />
+    <Compile Include="Editors\ErrorText.cs" />
+    <Compile Include="ObservableList.cs" />
+    <Compile Include="Shadow\Shadow.xaml.cs">
+      <DependentUpon>Shadow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StateTriggers\ElementSizeRangeTrigger.cs" />
+    <Compile Include="StateTriggers\ElementSizeTrigger.cs" />
+    <Compile Include="StringProvider.cs" />
+    <Compile Include="Themes\Generic.xaml.cs">
+      <DependentUpon>Generic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\BitmapUtils.cs" />
+    <Compile Include="Utils\ClippedPixelBlob.cs" />
+    <Compile Include="Utils\ColorBlending.cs" />
+    <Compile Include="Utils\ColorQuantization.cs" />
+    <Compile Include="Utils\ColorScale.cs" />
+    <Compile Include="Utils\ColorTypes.cs" />
+    <Compile Include="Utils\ColorUtils.cs" />
+    <Compile Include="Utils\CubicBezierEasingCache.cs" />
+    <Compile Include="Utils\IPixelBlob.cs" />
+    <Compile Include="Utils\JSONExtensionMethods.cs" />
+    <Compile Include="Utils\MathUtils.cs" />
+    <Compile Include="DelegateCommand.cs" />
+    <Compile Include="FilePickerAdapter.cs" />
+    <Compile Include="MessageBus\IMessageBus.cs" />
+    <Compile Include="MessageBus\MessageBus.cs" />
+    <Compile Include="ObjectPool\PoolableWrapper.cs" />
+    <Compile Include="ObjectPool\IObjectPool.cs" />
+    <Compile Include="ObjectPool\IPoolableObject.cs" />
+    <Compile Include="ObjectPool\ObjectPool.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\PaletteExtraction.cs" />
+    <Compile Include="Utils\PixelBlob.cs" />
+    <Compile Include="Utils\VisualTreeHelpers.cs" />
+    <Compile Include="ViewCommon\ExtensibleVisualStateManager.cs" />
+    <Compile Include="ViewCommon\IView.cs" />
+    <Compile Include="ViewCommon\PageViewBase.cs" />
+    <Compile Include="ViewCommon\ViewBase.cs" />
+    <Compile Include="ViewCommon\ViewContainer.cs" />
+    <Compile Include="ViewCommon\VisualStateAdapter.cs" />
+    <EmbeddedResource Include="Properties\DesignLabsShared.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.1.7</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.UI.Xaml">
+      <Version>2.0.180916002-prerelease</Version>
+    </PackageReference>
+    <PackageReference Include="System.ValueTuple">
+      <Version>4.5.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="ColorPalette\ExpandedColorPaletteEntryEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FluentEditorSharedResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Shadow\Shadow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FluentEditorShared.nuspec">
+      <SubType>Designer</SubType>
+    </None>
+    <PRIResource Include="Resources\en-us\Resources.resw" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

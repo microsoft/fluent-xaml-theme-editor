@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{8A6123DE-52D5-41D0-B08D-7A045CADA16E}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DesignLab</RootNamespace>
+    <AssemblyName>DesignLab</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17744.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17744.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <PackageCertificateKeyFile>FluentEditor_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxPackageDir>E:\packages\</AppxPackageDir>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <AppInstallerUpdateFrequency>1</AppInstallerUpdateFrequency>
+    <AppInstallerCheckForUpdateFrequency>OnApplicationRun</AppInstallerCheckForUpdateFrequency>
+    <PackageCertificateThumbprint>591A726A2856571A12981314E4886FFF0441B063</PackageCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OuterNav\INavItem.cs" />
+    <Compile Include="ControlPalette\ColorMapping.cs" />
+    <Compile Include="ControlPalette\Model\ControlPaletteExportProvider.cs" />
+    <Compile Include="ControlPalette\ControlPaletteResources.xaml.cs">
+      <DependentUpon>ControlPaletteResources.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPalette\ControlPaletteTestContent.xaml.cs">
+      <DependentUpon>ControlPaletteTestContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPalette\ControlPaletteView.xaml.cs">
+      <DependentUpon>ControlPaletteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPalette\ControlPaletteViewModel.cs" />
+    <Compile Include="ControlPalette\Model\ControlPaletteModel.cs" />
+    <Compile Include="ControlPalette\Model\Preset.cs" />
+    <Compile Include="ControlPalette\ExportView.xaml.cs">
+      <DependentUpon>ExportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPalette\ExportViewModel.cs" />
+    <Compile Include="Model\MainNavModel.cs" />
+    <Compile Include="OuterNav\OuterNavPage.xaml.cs">
+      <DependentUpon>OuterNavPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OuterNav\OuterNavViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="Assets\ColorAlgorithmToolBadgeLogo.scale-100.png" />
+    <Content Include="Assets\ColorAlgorithmToolBadgeLogo.scale-125.png" />
+    <Content Include="Assets\ColorAlgorithmToolBadgeLogo.scale-150.png" />
+    <Content Include="Assets\ColorAlgorithmToolBadgeLogo.scale-200.png" />
+    <Content Include="Assets\ColorAlgorithmToolBadgeLogo.scale-400.png" />
+    <Content Include="Assets\ColorAlgorithmToolSplashScreen.scale-100.png" />
+    <Content Include="Assets\ColorAlgorithmToolSplashScreen.scale-125.png" />
+    <Content Include="Assets\ColorAlgorithmToolSplashScreen.scale-150.png" />
+    <Content Include="Assets\ColorAlgorithmToolSplashScreen.scale-200.png" />
+    <Content Include="Assets\ColorAlgorithmToolSplashScreen.scale-400.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare150x150Logo.scale-100.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare150x150Logo.scale-125.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare150x150Logo.scale-150.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare150x150Logo.scale-200.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare150x150Logo.scale-400.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare310x310Logo.scale-100.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare310x310Logo.scale-125.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare310x310Logo.scale-150.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare310x310Logo.scale-200.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare310x310Logo.scale-400.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.scale-100.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.scale-125.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.scale-150.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.scale-200.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.scale-400.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-16_altform-unplated.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-20.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-20_altform-unplated.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-256_altform-unplated.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-30.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-30_altform-unplated.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-32_altform-unplated.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-36.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-36_altform-unplated.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-40.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-40_altform-unplated.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-48_altform-unplated.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-60.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-60_altform-unplated.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-64.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-64_altform-unplated.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-72.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-72_altform-unplated.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-80.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-80_altform-unplated.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-96.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare44x44Logo.targetsize-96_altform-unplated.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare71x71Logo.scale-100.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare71x71Logo.scale-125.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare71x71Logo.scale-150.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare71x71Logo.scale-200.png" />
+    <Content Include="Assets\ColorAlgorithmToolSquare71x71Logo.scale-400.png" />
+    <Content Include="Assets\ColorAlgorithmToolStoreLogo.scale-100.png" />
+    <Content Include="Assets\ColorAlgorithmToolStoreLogo.scale-125.png" />
+    <Content Include="Assets\ColorAlgorithmToolStoreLogo.scale-150.png" />
+    <Content Include="Assets\ColorAlgorithmToolStoreLogo.scale-200.png" />
+    <Content Include="Assets\ColorAlgorithmToolStoreLogo.scale-400.png" />
+    <Content Include="Assets\ColorAlgorithmToolWide310x150Logo.scale-100.png" />
+    <Content Include="Assets\ColorAlgorithmToolWide310x150Logo.scale-125.png" />
+    <Content Include="Assets\ColorAlgorithmToolWide310x150Logo.scale-150.png" />
+    <Content Include="Assets\ColorAlgorithmToolWide310x150Logo.scale-200.png" />
+    <Content Include="Assets\ColorAlgorithmToolWide310x150Logo.scale-400.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolBadgeLogo.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolBadgeLogo.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolBadgeLogo.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolBadgeLogo.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolBadgeLogo.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSplashScreen.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSplashScreen.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSplashScreen.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSplashScreen.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSplashScreen.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare150x150Logo.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare150x150Logo.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare150x150Logo.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare150x150Logo.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare150x150Logo.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare310x310Logo.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare310x310Logo.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare310x310Logo.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare310x310Logo.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare310x310Logo.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-16_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-16_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-20_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-20_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-24_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-24_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-256_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-256_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-30_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-30_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-32_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-32_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-36_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-36_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-40_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-40_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-48_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-48_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-60_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-60_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-64_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-64_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-72_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-72_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-80_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-80_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-96_altform-unplated_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare44x44Logo.targetsize-96_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare71x71Logo.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare71x71Logo.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare71x71Logo.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare71x71Logo.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolSquare71x71Logo.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolStoreLogo.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolStoreLogo.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolStoreLogo.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolStoreLogo.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolStoreLogo.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolWide310x150Logo.scale-100_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolWide310x150Logo.scale-125_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolWide310x150Logo.scale-150_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolWide310x150Logo.scale-200_contrast-black.png" />
+    <Content Include="Assets\contrast-black\ColorAlgorithmToolWide310x150Logo.scale-400_contrast-black.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolBadgeLogo.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolBadgeLogo.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolBadgeLogo.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolBadgeLogo.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolBadgeLogo.scale-400_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSplashScreen.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSplashScreen.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSplashScreen.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSplashScreen.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSplashScreen.scale-400_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare150x150Logo.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare150x150Logo.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare150x150Logo.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare150x150Logo.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare150x150Logo.scale-400_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare310x310Logo.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare310x310Logo.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare310x310Logo.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare310x310Logo.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare310x310Logo.scale-400_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.scale-400_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-16_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-16_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-20_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-20_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-24_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-24_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-256_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-256_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-30_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-30_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-32_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-32_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-36_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-36_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-40_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-40_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-48_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-48_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-60_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-60_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-64_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-64_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-72_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-72_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-80_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-80_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-96_altform-unplated_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare44x44Logo.targetsize-96_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare71x71Logo.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare71x71Logo.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare71x71Logo.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare71x71Logo.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolSquare71x71Logo.scale-400_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolStoreLogo.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolStoreLogo.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolStoreLogo.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolStoreLogo.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolStoreLogo.scale-400_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolWide310x150Logo.scale-100_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolWide310x150Logo.scale-125_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolWide310x150Logo.scale-150_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolWide310x150Logo.scale-200_contrast-white.png" />
+    <Content Include="Assets\contrast-white\ColorAlgorithmToolWide310x150Logo.scale-400_contrast-white.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Square150x150Logo.scale-400.png" />
+    <Content Include="Resources\en-us\demodata.json" />
+    <None Include="FluentEditor_TemporaryKey.pfx" />
+    <Content Include="Resources\en-us\controlPaletteData.json" />
+    <PRIResource Include="Resources\en-us\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\Default.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="ControlPalette\ControlPaletteResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlPalette\ControlPaletteTestContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlPalette\ControlPaletteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlPalette\ExportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OuterNav\OuterNavPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.1.7</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.UI.Xaml">
+      <Version>2.0.180916002-prerelease</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FluentEditorShared\FluentEditorShared.csproj">
+      <Project>{42a312ef-7c4a-4661-a684-db14e40a2a90}</Project>
+      <Name>FluentEditorShared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

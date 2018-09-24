@@ -1,0 +1,124 @@
+﻿<!--
+    Copyright (c) Microsoft Corporation. All rights reserved.
+    Licensed under the MIT License.
+-->
+<UserControl
+    x:Class="FluentEditorShared.ColorPalette.ExpandedColorPaletteEntryEditor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:editors="using:FluentEditorShared.Editors"
+    xmlns:local="using:FluentEditorShared.ColorPalette"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:winui="using:Microsoft.UI.Xaml.Controls"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    mc:Ignorable="d">
+
+    <Grid Width="780">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="24" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            Grid.Column="0"
+            Margin="12,12,0,12">
+            <TextBlock
+                x:Name="TitleField"
+                FontWeight="SemiBold"
+                LineHeight="28"
+                Style="{ThemeResource SubtitleTextBlockStyle}" />
+            <TextBlock
+                x:Name="DescriptionField"
+                Margin="0,2,0,0"
+                Foreground="{ThemeResource SystemControlForegroundBaseMediumHighBrush}"
+                LineHeight="16"
+                Style="{ThemeResource BodyTextBlockStyle}"
+                TextWrapping="WrapWholeWords" />
+            <TextBlock
+                x:Uid="ExpandedColorPaletteEntryEditorContrastRatioTitle"
+                Margin="0,24,0,12"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                LineHeight="20"
+                Style="{StaticResource BaseTextBlockStyle}" />
+            <ItemsControl
+                Margin="0,0,0,12"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Top"
+                ItemsSource="{x:Bind Path=ContrastList, Mode=OneWay}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="local:ContrastListItem">
+                        <Grid
+                            Margin="0,0,0,12"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Top">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Border
+                                Grid.Column="0"
+                                Width="28"
+                                Height="28"
+                                Background="{x:Bind Path=ContrastColorBrush, Mode=OneWay}"
+                                BorderBrush="{ThemeResource SystemControlForegroundBaseLowBrush}"
+                                BorderThickness="1"
+                                CornerRadius="1"
+                                ToolTipService.ToolTip="{x:Bind Path=ContrastColor.ActiveColorString, Mode=OneWay}" />
+                            <TextBlock
+                                Grid.Column="1"
+                                MinWidth="120"
+                                Margin="8,0,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Text="{x:Bind Path=ContrastColor.Title, Mode=OneWay}"
+                                TextWrapping="WrapWholeWords" />
+                            <editors:ErrorText
+                                Grid.Column="2"
+                                Margin="8,0,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                ShowErrorState="{x:Bind Path=ContrastError, Mode=OneWay}"
+                                Text="{x:Bind Path=Contrast, Mode=OneWay}" />
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <HyperlinkButton
+                x:Uid="ExpandedColorPaletteEntryEditorContrastInfoButton"
+                Margin="0,8,0,0"
+                NavigateUri="" />
+        </StackPanel>
+
+        <winui:ColorPicker
+            x:Name="ColorPicker"
+            Grid.Row="0"
+            Grid.Column="2"
+            Margin="0,12,12,12"
+            ColorChanged="ColorPicker_ColorChanged"
+            Color="{x:Bind Path=ColorPaletteEntry.ActiveColor, Mode=OneWay}" />
+
+        <Button
+            x:Name="RevertButton"
+            x:Uid="ExpandedColorPaletteEntryEditorRevertButton"
+            Grid.Row="1"
+            Grid.Column="2"
+            MinWidth="132"
+            MinHeight="32"
+            Margin="0,0,12,12"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Click="RevertButton_Click" />
+    </Grid>
+</UserControl>
