@@ -1,0 +1,11 @@
+﻿{
+  "Demos": [
+    {
+      "Type": "ControlPalette",
+      "Id": "ControlPalette",
+      "Title": "Démo palette contrôle",
+      "Glyph": ""
+    }
+  ],
+  "DefaultDemoId": "ControlPalette"
+}
