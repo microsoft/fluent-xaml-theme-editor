@@ -225,6 +225,7 @@
     <None Include="FluentEditorShared.nuspec">
       <SubType>Designer</SubType>
     </None>
+    <PRIResource Include="Resources\fr-fr\Resources.resw" />
     <PRIResource Include="Resources\en-us\Resources.resw" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
