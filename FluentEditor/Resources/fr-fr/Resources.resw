@@ -136,7 +136,7 @@
     <value>Thème sombre</value>
   </data>
   <data name="ControlPaletteDataPath" xml:space="preserve">
-    <value>ms-appx:///Resources/en-us/controlPaletteData.json</value>
+    <value>ms-appx:///Resources/fr-fr/controlPaletteData.json</value>
   </data>
   <data name="ControlPaletteErrorOkButtonCaption" xml:space="preserve">
     <value>Ok</value>
@@ -196,13 +196,13 @@
     <value>Apprendre plus sur XAML ResourceDictionary</value>
   </data>
   <data name="ExportLearnMoreButton.NavigateUri" xml:space="preserve">
-    <value>https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references</value>
+    <value>https://docs.microsoft.com/fr-fr/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references</value>
   </data>
   <data name="LightThemeTextContrastTitle" xml:space="preserve">
     <value>Texte noire</value>
   </data>
   <data name="MainDataPath" xml:space="preserve">
-    <value>ms-appx:///Resources/en-us/demodata.json</value>
+    <value>ms-appx:///Resources/fr-fr/demodata.json</value>
   </data>
   <data name="TestContentAppBarButton.Content" xml:space="preserve">
     <value>Yolo</value>

@@ -133,7 +133,7 @@
     <value>En savoir plus sur les taux de contraste</value>
   </data>
   <data name="ExpandedColorPaletteEntryEditorContrastInfoButton.NavigateUri" xml:space="preserve">
-    <value>https://docs.microsoft.com/en-us/windows/uwp/design/accessibility/accessible-text-requirements#contrast-ratios</value>
+    <value>https://docs.microsoft.com/fr-fr/windows/uwp/design/accessibility/accessible-text-requirements#contrast-ratios</value>
   </data>
   <data name="ExpandedColorPaletteEntryEditorContrastRatioTitle.Text" xml:space="preserve">
     <value>Information taux de contraste</value>
