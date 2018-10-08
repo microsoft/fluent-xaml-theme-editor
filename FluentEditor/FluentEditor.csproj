@@ -353,6 +353,9 @@
     <PRIResource Include="Resources\es-es\Resources.resw" />
     <None Include="FluentEditor_TemporaryKey.pfx" />
     <Content Include="Resources\en-us\controlPaletteData.json" />
+    <Content Include="Resources\fr-fr\controlPaletteData.json" />
+    <Content Include="Resources\fr-fr\demodata.json" />
+    <PRIResource Include="Resources\fr-fr\Resources.resw" />
     <PRIResource Include="Resources\en-us\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
