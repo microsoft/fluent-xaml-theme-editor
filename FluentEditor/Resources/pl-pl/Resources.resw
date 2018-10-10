@@ -136,7 +136,7 @@
     <value>Ciemny motyw</value>
   </data>
   <data name="ControlPaletteDataPath" xml:space="preserve">
-    <value>ms-appx:///Resources/en-us/controlPaletteData.json</value>
+    <value>ms-appx:///Resources/pl-pl/controlPaletteData.json</value>
   </data>
   <data name="ControlPaletteErrorOkButtonCaption" xml:space="preserve">
     <value>Ok</value>
