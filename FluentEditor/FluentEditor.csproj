@@ -357,6 +357,7 @@
     <Content Include="Resources\fr-fr\demodata.json" />
     <Content Include="Resources\it-it\controlPaletteData.json" />
     <Content Include="Resources\it-it\demodata.json" />
+    <Content Include="Resources\pl-pl\controlPaletteData.json" />
     <Content Include="Resources\pl-pl\demodata.json" />
     <PRIResource Include="Resources\fr-fr\Resources.resw" />
     <PRIResource Include="Resources\it-it\Resources.resw" />

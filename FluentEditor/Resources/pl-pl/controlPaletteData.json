@@ -1,31 +1,37 @@
 ﻿{
   "LightRegion": {
+    "Title": "Jasny obszar",
     "Color": "#FFFFFFFF"
   },
   "DarkRegion": {
+    "Title": "Ciemny obszar",
     "Color": "#FF282828"
   },
   "LightBase": {
     "Steps": 11,
     "BaseColor": {
+      "Title": "Jasna baza",
       "Color": "#FFCCCCCC"
     }
   },
   "DarkBase": {
     "Steps": 11,
     "BaseColor": {
+      "Title": "Ciemna baza",
       "Color": "#FF333333"
     }
   },
   "LightPrimary": {
     "Steps": 11,
     "BaseColor": {
+      "Title": "Jasny podstawowy",
       "Color": "#FF1686AE"
     }
   },
   "DarkPrimary": {
     "Steps": 11,
     "BaseColor": {
+      "Title": "Ciemny podstawowy",
       "Color": "#FF1686AE"
     }
   },
@@ -278,6 +284,7 @@
   "Presets": [
     {
       "Id": "Default",
+      "Name": "Domyślny",
       "LightRegionColor": "#FFFFFFFF",
       "DarkRegionColor": "#FF000000",
       "LightBaseColor": "#FFCCCCCC",
@@ -287,6 +294,7 @@
     },
     {
       "Id": "Lavender",
+      "Name": "Lawenda",
       "LightRegionColor": "#FFFEF6FF",
       "DarkRegionColor": "#FF262738",
       "LightBaseColor": "#FFEECEFF",
@@ -296,6 +304,7 @@
     },
     {
       "Id": "Forest",
+      "Name": "Las",
       "LightRegionColor": "#FFF7FFFF",
       "DarkRegionColor": "#FF353819",
       "LightBaseColor": "#FFC2DB65",
@@ -305,6 +314,7 @@
     },
     {
       "Id": "Nighttime",
+      "Name": "Noc",
       "LightRegionColor": "#FFCFEAFF",
       "DarkRegionColor": "#FF0D2644",
       "LightBaseColor": "#FF7CBEE0",
