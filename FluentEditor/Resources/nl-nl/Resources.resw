@@ -127,7 +127,7 @@
     <value>Zet om naar {0}</value>
   </data>
   <data name="ControlPaletteBaseBlock.Text" xml:space="preserve">
-    <value>Basis</value>
+    <value>Basiskleur (kleur "Base")</value>
   </data>
   <data name="ControlPaletteDarkTestContent.Title" xml:space="preserve">
     <value>Donker thema</value>
@@ -145,7 +145,7 @@
     <value>Exporteren</value>
   </data>
   <data name="ControlPaletteInspectorHeader.Text" xml:space="preserve">
-    <value>Kleurenwoordenboek</value>
+    <value>Kleurenpalet</value>
   </data>
   <data name="ControlPaletteLightTestContent.Title" xml:space="preserve">
     <value>Licht thema</value>
@@ -169,10 +169,10 @@
     <value>Aangepast</value>
   </data>
   <data name="ControlPalettePrimaryBlock.Text" xml:space="preserve">
-    <value>Primair</value>
+    <value>Primaire kleur (kleur "Accent")</value>
   </data>
   <data name="ControlPaletteRegionBlock.Text" xml:space="preserve">
-    <value>Gebied</value>
+    <value>Region (kleur van het vlak achter gebruikersinterface-elementen)</value>
   </data>
   <data name="ControlPaletteResetButton.Content" xml:space="preserve">
     <value>Kleuren terugzetten</value>
@@ -241,7 +241,7 @@
     <value>Datumkiezer</value>
   </data>
   <data name="TestContentDisabledAccentButton.Content" xml:space="preserve">
-    <value>Uitgeschakelde accentknop</value>
+    <value>Uitgeschakelde knop (kleur "Accent")</value>
   </data>
   <data name="TestContentDisabledButton.Content" xml:space="preserve">
     <value>Uitgeschakelde knop</value>
@@ -262,7 +262,7 @@
     <value>Bewerkbaar item 3</value>
   </data>
   <data name="TestContentEnabledAccentButton.Content" xml:space="preserve">
-    <value>Ingeschakelde accentknop</value>
+    <value>Ingeschakelde knop (kleur "Accent")</value>
   </data>
   <data name="TestContentEnabledButton.Content" xml:space="preserve">
     <value>Ingeschakelde knop</value>
