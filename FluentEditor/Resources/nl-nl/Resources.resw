@@ -295,7 +295,7 @@
     <value>Tekstvak</value>
   </data>
   <data name="TestContentThirdStateCheckbox.Content" xml:space="preserve">
-    <value>Derde staat</value>
+    <value>Drie standen</value>
   </data>
   <data name="TestContentTimePickerBlock.Text" xml:space="preserve">
     <value>Tijdkiezer</value>
