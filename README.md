@@ -13,7 +13,7 @@ The source code located in this repo was created with the Universal Windows Plat
 Universal Windows Platform development
 ---
 
-This application requires Visual Studio 2017 Update 4 or higher and the Windows Software Development Kit (SDK) version 17744 or higher for Windows 10.
+This application requires Visual Studio 2017 Update 4 or higher and the Windows Software Development Kit (SDK) version 17763 or higher for Windows 10.
 
    [Get a free copy of Visual Studio 2017 Community Edition with support for building Universal Windows Platform apps](http://go.microsoft.com/fwlink/p/?LinkID=280676)
 
