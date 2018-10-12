@@ -81,7 +81,7 @@ private ColorPaletteResources FindColorPaletteResourcesForTheme(string theme)
 ```
 We don't recommend doing this too often at runtime as you could experience some performance issues, but if placed in a Settings page or areas where you don't expect users to toggle it often, the performance shouldn't be too bad.
 
-> **Tip!:** You need to reload a ResourceDictionary in order for the resources within to get any new color changes you've applied. You can do so by flipping the RequestedTheme to a different theme and back again. That is what the ReloadPageTheme function is doing.
+> **Tip!** You need to reload a ResourceDictionary in order for the resources within to get any new color changes you've applied. You can do so by flipping the RequestedTheme to a different theme and back again. That is what the ReloadPageTheme function is doing.
 
 Theming for Downlevel
 ---
