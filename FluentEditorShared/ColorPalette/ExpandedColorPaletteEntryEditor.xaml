@@ -77,7 +77,7 @@
                                 ToolTipService.ToolTip="{x:Bind Path=ContrastColor.ActiveColorString, Mode=OneWay}" />
                             <TextBlock
                                 Grid.Column="1"
-                                MinWidth="120"
+                                MinWidth="150"
                                 Margin="8,0,0,0"
                                 HorizontalAlignment="Left"
                                 VerticalAlignment="Center"

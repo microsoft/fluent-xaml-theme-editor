@@ -1,37 +1,37 @@
 ﻿{
   "LightRegion": {
-    "Title": "Licht gebied",
+    "Title": "Achtergrondkleur (licht)",
     "Color": "#FFFFFFFF"
   },
   "DarkRegion": {
-    "Title": "Donker gebied",
+    "Title": "Achtergrondkleur (donker)",
     "Color": "#FF282828"
   },
   "LightBase": {
     "Steps": 11,
     "BaseColor": {
-      "Title": "Lichte basiskleur",
+      "Title": "Basiskleur (licht)",
       "Color": "#FFCCCCCC"
     }
   },
   "DarkBase": {
     "Steps": 11,
     "BaseColor": {
-      "Title": "Donkere basiskleur",
+      "Title": "Basiskleur (donker)",
       "Color": "#FF333333"
     }
   },
   "LightPrimary": {
     "Steps": 11,
     "BaseColor": {
-      "Title": "Licht primair",
+      "Title": "Primaire kleur (licht)",
       "Color": "#FF1686AE"
     }
   },
   "DarkPrimary": {
     "Steps": 11,
     "BaseColor": {
-      "Title": "Donker primair",
+      "Title": "Primaire kleur (donker)",
       "Color": "#FF1686AE"
     }
   },

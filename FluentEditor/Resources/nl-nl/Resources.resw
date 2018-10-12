@@ -127,7 +127,7 @@
     <value>Zet om naar {0}</value>
   </data>
   <data name="ControlPaletteBaseBlock.Text" xml:space="preserve">
-    <value>Basiskleur (kleur "Base")</value>
+    <value>Basiskleur ("Base")</value>
   </data>
   <data name="ControlPaletteDarkTestContent.Title" xml:space="preserve">
     <value>Donker thema</value>
@@ -169,10 +169,10 @@
     <value>Aangepast</value>
   </data>
   <data name="ControlPalettePrimaryBlock.Text" xml:space="preserve">
-    <value>Primaire kleur (kleur "Accent")</value>
+    <value>Primaire kleur ("Accent")</value>
   </data>
   <data name="ControlPaletteRegionBlock.Text" xml:space="preserve">
-    <value>Achtergrondkleur (kleur "Region")</value>
+    <value>Achtergrondkleur ("Region")</value>
   </data>
   <data name="ControlPaletteResetButton.Content" xml:space="preserve">
     <value>Kleuren terugzetten</value>
