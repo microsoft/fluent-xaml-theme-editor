@@ -121,7 +121,7 @@
     <value>Een hulpmiddel dat de flexibiliteit van het Fluent Design System laat zien en dat het applicatieontwikkelingsproces ondersteunt door XAML markup te genereren voor ons ResourceDictionary framework dat gebruikt wordt in Universal Windows Platform (UWP) applicaties</value>
   </data>
   <data name="AppDisplayName" xml:space="preserve">
-    <value>Fluent XAML Theme Editor</value>
+    <value>Fluent XAML thema-editor</value>
   </data>
   <data name="ColorFlyoutMappingDescription" xml:space="preserve">
     <value>Zet om naar {0}</value>
@@ -172,7 +172,7 @@
     <value>Primaire kleur (kleur "Accent")</value>
   </data>
   <data name="ControlPaletteRegionBlock.Text" xml:space="preserve">
-    <value>Region (kleur van het vlak achter gebruikersinterface-elementen)</value>
+    <value>Achtergrondkleur (kleur "Region")</value>
   </data>
   <data name="ControlPaletteResetButton.Content" xml:space="preserve">
     <value>Kleuren terugzetten</value>
