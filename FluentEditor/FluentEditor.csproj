@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -349,7 +349,10 @@
     <Content Include="Assets\Square150x150Logo.scale-400.png" />
     <Content Include="Resources\en-us\demodata.json" />
     <Content Include="Resources\es-es\controlPaletteData.json" />
-    <Content Include="Resources\es-es\demodata.json" /> 
+    <Content Include="Resources\es-es\demodata.json" />
+    <Content Include="Resources\nl-nl\controlPaletteData.json" />
+    <Content Include="Resources\nl-nl\demodata.json" />
+    <PRIResource Include="Resources\nl-nl\Resources.resw" />
     <PRIResource Include="Resources\es-es\Resources.resw" />
     <None Include="FluentEditor_TemporaryKey.pfx" />
     <Content Include="Resources\en-us\controlPaletteData.json" />
