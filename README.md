@@ -25,6 +25,64 @@ Using the tool
 ---
 If you wish to get access to the source code without using Git you can download the zip file directly by clicking on the "Clone or Download" dropdown button at the top right of the repo landing page and selecting the last option labeled "Download Zip".
 
+Using ColorPaletteResources in code-behind
+---
+To access the ColorPaletteResources API in code behind, and to change any of the color properties at runtime, loop through the merged dictionaries in app.xaml (or at the scope that you merged your themes) and grab a reference to the currently used ResourceDictionary as a ColorPaletteResource instance
+
+Here's an example of how to grab and edit the properties on ColorPaletteResources in C#:
+```C#
+public MainPage()
+{
+    this.InitializeComponent();
+
+    ColorPaletteResources cpr = FindColorPaletteResourcesForTheme("Light");
+    cpr.Accent = Colors.Red;
+
+    ReloadPageTheme(this.RequestedTheme);
+}
+
+private void ReloadPageTheme(ElementTheme startTheme)
+{
+    if (this.RequestedTheme == ElementTheme.Dark)
+        this.RequestedTheme = ElementTheme.Light;
+    else if (this.RequestedTheme == ElementTheme.Light)
+        this.RequestedTheme = ElementTheme.Default;
+    else if (this.RequestedTheme == ElementTheme.Default)
+        this.RequestedTheme = ElementTheme.Dark;
+
+    if (this.RequestedTheme != startTheme)
+        ReloadPageTheme(startTheme);
+}
+
+private ColorPaletteResources FindColorPaletteResourcesForTheme(string theme)
+{
+    foreach (var themeDictionary in Application.Current.Resources.ThemeDictionaries)
+    {
+        if (themeDictionary.Key.ToString() == theme)
+        {
+            if (themeDictionary.Value is ColorPaletteResources)
+            {
+                return themeDictionary.Value as ColorPaletteResources;
+            }
+            else if (themeDictionary.Value is ResourceDictionary targetDictionary)
+            {
+                foreach (var mergedDictionary in targetDictionary.MergedDictionaries)
+                {
+                    if (mergedDictionary is ColorPaletteResources)
+                    {
+                        return mergedDictionary as ColorPaletteResources;
+                    }
+                }
+            }
+        }
+    }
+    return null;
+}
+```
+We don't recommend doing this too often at runtime as you could experience some performance issues, but if placed in a Settings page or areas where you don't expect users to toggle it often, the performance shouldn't be too bad.
+
+> **Tip!:** You need to reload a ResourceDictionary in order for the resources within to get any new color changes you've applied. You can do so by flipping the RequestedTheme to a different theme and back again. That is what the ReloadPageTheme function is doing.
+
 Theming for Downlevel
 ---
 Although the API used in the exported code for this tool is for version 17744 or greater, it's not too complicated to get your theme to work on earlier SDK versions.
