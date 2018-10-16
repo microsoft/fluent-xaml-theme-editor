@@ -49,6 +49,15 @@ namespace FluentEditor.ControlPalette.Model
             }
             sb.AppendLine(" />");
             sb.AppendLine("            <ResourceDictionary>");
+
+            Windows.UI.Color ChromeAltMediumHigh = model.DarkRegion.ActiveColor;
+            ChromeAltMediumHigh.A = 204;
+
+            sb.AppendLine(string.Format("                <Color x:Key=\"SystemChromeAltMediumHighColor\">{0}</Color>", ChromeAltMediumHigh.ToString()));
+            sb.AppendLine(string.Format("                <Color x:Key=\"SystemChromeAltHighColor\">{0}</Color>", model.DarkRegion.ActiveColor.ToString()));
+            sb.AppendLine(string.Format("                <Color x:Key=\"SystemRevealListLowColor\">{0}</Color>", model.DarkBase.Palette[8].ActiveColor.ToString()));
+            sb.AppendLine(string.Format("                <Color x:Key=\"SystemRevealListMediumColor\">{0}</Color>", model.DarkBase.Palette[5].ActiveColor.ToString()));
+
             sb.AppendLine(string.Format("                <Color x:Key=\"RegionColor\">{0}</Color>", model.DarkRegion.ActiveColor.ToString()));
             sb.AppendLine("                <SolidColorBrush x:Key=\"RegionBrush\" Color=\"{StaticResource RegionColor}\" />");
             if (showAllColors)
@@ -121,6 +130,15 @@ namespace FluentEditor.ControlPalette.Model
             }
             sb.AppendLine(" />");
             sb.AppendLine("            <ResourceDictionary>");
+
+            ChromeAltMediumHigh = model.LightRegion.ActiveColor;
+            ChromeAltMediumHigh.A = 204;
+
+            sb.AppendLine(string.Format("                <Color x:Key=\"SystemChromeAltMediumHighColor\">{0}</Color>", ChromeAltMediumHigh.ToString()));
+            sb.AppendLine(string.Format("                <Color x:Key=\"SystemChromeAltHighColor\">{0}</Color>", model.LightRegion.ActiveColor.ToString()));
+            sb.AppendLine(string.Format("                <Color x:Key=\"SystemRevealListLowColor\">{0}</Color>", model.LightBase.Palette[1].ActiveColor.ToString()));
+            sb.AppendLine(string.Format("                <Color x:Key=\"SystemRevealListMediumColor\">{0}</Color>", model.LightBase.Palette[5].ActiveColor.ToString()));
+
             sb.AppendLine(string.Format("                <Color x:Key=\"RegionColor\">{0}</Color>", model.LightRegion.ActiveColor.ToString()));
             sb.AppendLine("                <SolidColorBrush x:Key=\"RegionBrush\" Color=\"{StaticResource RegionColor}\" />");
             if (showAllColors)
