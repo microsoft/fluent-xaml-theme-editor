@@ -20,6 +20,10 @@ This application requires Visual Studio 2017 Update 4 or higher and the Windows 
 Additionally, to stay on top of the latest updates to Windows and the development tools, become a Windows Insider by joining the Windows Insider Program.
 
    [Become a Windows Insider](https://insider.windows.com/)
+   
+Store version of tool
+---
+If you're not looking to be apart of this open source project and instead would just like to use the app itself, please to go the Microsfot Store version of this tool and [download it there](https://www.microsoft.com/store/apps/9N2XD3Q8X57C).
 
 Using the tool
 ---
