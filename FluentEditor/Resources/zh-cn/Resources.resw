@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppDescription" xml:space="preserve">
+    <value>一个用于演示流畅设计系统的灵活性及支持应用程序开发的工具，为通用 Windows 平台（UWP）应用程序中的 ResourceDictionary 框架生成 XAML 标记</value>
+  </data>
+  <data name="AppDisplayName" xml:space="preserve">
+    <value>流畅 XAML 主题编辑器</value>
+  </data>
+  <data name="ColorFlyoutMappingDescription" xml:space="preserve">
+    <value>映射至 {0}</value>
+  </data>
+  <data name="ControlPaletteBaseBlock.Text" xml:space="preserve">
+    <value>基本色</value>
+  </data>
+  <data name="ControlPaletteDarkTestContent.Title" xml:space="preserve">
+    <value>暗色主题</value>
+  </data>
+  <data name="ControlPaletteDarkThemeBlock.Text" xml:space="preserve">
+    <value>暗色主题</value>
+  </data>
+  <data name="ControlPaletteDataPath" xml:space="preserve">
+    <value>ms-appx:///Resources/zh-cn/controlPaletteData.json</value>
+  </data>
+  <data name="ControlPaletteErrorOkButtonCaption" xml:space="preserve">
+    <value>好的</value>
+  </data>
+  <data name="ControlPaletteExportButton.Content" xml:space="preserve">
+    <value>导出</value>
+  </data>
+  <data name="ControlPaletteInspectorHeader.Text" xml:space="preserve">
+    <value>颜色字典</value>
+  </data>
+  <data name="ControlPaletteLightTestContent.Title" xml:space="preserve">
+    <value>亮色主题</value>
+  </data>
+  <data name="ControlPaletteLightThemeBlock.Text" xml:space="preserve">
+    <value>亮色主题</value>
+  </data>
+  <data name="ControlPaletteLoadButton.Content" xml:space="preserve">
+    <value>载入</value>
+  </data>
+  <data name="ControlPaletteLoadError" xml:space="preserve">
+    <value>无法载入文件 {0}</value>
+  </data>
+  <data name="ControlPaletteLoadErrorTitle" xml:space="preserve">
+    <value>无法载入</value>
+  </data>
+  <data name="ControlPalettePresetCombo.Header" xml:space="preserve">
+    <value>预设</value>
+  </data>
+  <data name="ControlPalettePresetCombo.PlaceholderText" xml:space="preserve">
+    <value>自定义</value>
+  </data>
+  <data name="ControlPalettePrimaryBlock.Text" xml:space="preserve">
+    <value>主要色</value>
+  </data>
+  <data name="ControlPaletteRegionBlock.Text" xml:space="preserve">
+    <value>区域色</value>
+  </data>
+  <data name="ControlPaletteResetButton.Content" xml:space="preserve">
+    <value>重置颜色</value>
+  </data>
+  <data name="ControlPaletteSaveButton.Content" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="ControlPaletteSaveError" xml:space="preserve">
+    <value>无法保存文件 {0}</value>
+  </data>
+  <data name="ControlPaletteSaveErrorTitle" xml:space="preserve">
+    <value>无法保存</value>
+  </data>
+  <data name="DarkThemeTextContrastTitle" xml:space="preserve">
+    <value>白色文字</value>
+  </data>
+  <data name="ExportCopyButton.Content" xml:space="preserve">
+    <value>复制至剪贴板</value>
+  </data>
+  <data name="ExportLearnMoreButton.Content" xml:space="preserve">
+    <value>了解更多关于 XAML ResourceDictionary</value>
+  </data>
+  <data name="ExportLearnMoreButton.NavigateUri" xml:space="preserve">
+    <value>https://docs.microsoft.com/zh-cn/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references</value>
+  </data>
+  <data name="LightThemeTextContrastTitle" xml:space="preserve">
+    <value>黑色文字</value>
+  </data>
+  <data name="MainDataPath" xml:space="preserve">
+    <value>ms-appx:///Resources/zh-cn/demodata.json</value>
+  </data>
+  <data name="TestContentAppBarButton.Content" xml:space="preserve">
+    <value>Yolo</value>
+  </data>
+  <data name="TestContentButtonsBlock.Text" xml:space="preserve">
+    <value>按钮</value>
+  </data>
+  <data name="TestContentCalendarViewBlock.Text" xml:space="preserve">
+    <value>日历视图</value>
+  </data>
+  <data name="TestContentCheckboxBlock.Text" xml:space="preserve">
+    <value>复选框</value>
+  </data>
+  <data name="TestContentCheckedCheckbox.Content" xml:space="preserve">
+    <value>选中</value>
+  </data>
+  <data name="TestContentCheckedRadio.Content" xml:space="preserve">
+    <value>选中</value>
+  </data>
+  <data name="TestContentComboBlock.Text" xml:space="preserve">
+    <value>选择框</value>
+  </data>
+  <data name="TestContentComboItem1.Content" xml:space="preserve">
+    <value>选项 1</value>
+  </data>
+  <data name="TestContentComboItem2.Content" xml:space="preserve">
+    <value>选项 2</value>
+  </data>
+  <data name="TestContentComboItem3.Content" xml:space="preserve">
+    <value>选项 3</value>
+  </data>
+  <data name="TestContentCommandBarBlock.Text" xml:space="preserve">
+    <value>命令栏</value>
+  </data>
+  <data name="TestContentDatePickerBlock.Text" xml:space="preserve">
+    <value>日期选取器</value>
+  </data>
+  <data name="TestContentDisabledAccentButton.Content" xml:space="preserve">
+    <value>无效着重按钮</value>
+  </data>
+  <data name="TestContentDisabledButton.Content" xml:space="preserve">
+    <value>无效按钮</value>
+  </data>
+  <data name="TestContentDisabledCheckbox.Content" xml:space="preserve">
+    <value>无效</value>
+  </data>
+  <data name="TestContentDisabledRadio.Content" xml:space="preserve">
+    <value>无效</value>
+  </data>
+  <data name="TestContentEditableComboItem1.Content" xml:space="preserve">
+    <value>可编辑项 1</value>
+  </data>
+  <data name="TestContentEditableComboItem2.Content" xml:space="preserve">
+    <value>可编辑项 2</value>
+  </data>
+  <data name="TestContentEditableComboItem3.Content" xml:space="preserve">
+    <value>可编辑项 3</value>
+  </data>
+  <data name="TestContentEnabledAccentButton.Content" xml:space="preserve">
+    <value>有效着重按钮</value>
+  </data>
+  <data name="TestContentEnabledButton.Content" xml:space="preserve">
+    <value>有效按钮</value>
+  </data>
+  <data name="TestContentListviewBlock.Text" xml:space="preserve">
+    <value>列表视图</value>
+  </data>
+  <data name="TestContentListviewItem1.Content" xml:space="preserve">
+    <value>Howdy! (无效)</value>
+  </data>
+  <data name="TestContentListviewItem2.Content" xml:space="preserve">
+    <value>Aloha! (选中)</value>
+  </data>
+  <data name="TestContentListviewItem3.Content" xml:space="preserve">
+    <value>Hello!</value>
+  </data>
+  <data name="TestContentListviewItem4.Content" xml:space="preserve">
+    <value>Hola!</value>
+  </data>
+  <data name="TestContentRadioBlock.Text" xml:space="preserve">
+    <value>单选框</value>
+  </data>
+  <data name="TestContentSliderBlock.Text" xml:space="preserve">
+    <value>滑块</value>
+  </data>
+  <data name="TestContentTextbox.PlaceholderText" xml:space="preserve">
+    <value>在此输入文字</value>
+  </data>
+  <data name="TestContentTextboxBlock.Text" xml:space="preserve">
+    <value>文本框</value>
+  </data>
+  <data name="TestContentThirdStateCheckbox.Content" xml:space="preserve">
+    <value>半选</value>
+  </data>
+  <data name="TestContentTimePickerBlock.Text" xml:space="preserve">
+    <value>时间选取器</value>
+  </data>
+  <data name="TestContentToggleBlock.Text" xml:space="preserve">
+    <value>开关切换</value>
+  </data>
+  <data name="TestContentToggleButton.Content" xml:space="preserve">
+    <value>开关按钮</value>
+  </data>
+  <data name="TestContentToggledButton.Content" xml:space="preserve">
+    <value>开启的按钮</value>
+  </data>
+  <data name="TestContentUncheckedCheckbox.Content" xml:space="preserve">
+    <value>未选中</value>
+  </data>
+  <data name="TestContentUncheckedRadio.Content" xml:space="preserve">
+    <value>未选中</value>
+  </data>
+</root>
