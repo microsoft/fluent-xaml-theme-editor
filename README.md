@@ -2,7 +2,7 @@
 Fluent XAML Theme Editor 
 ===
 
-![using component overrides](XamlThemeEditor_screenshot.png)
+![using component overrides](README_Images/XamlThemeEditor_screenshot.png)
 
 This repo contains the full solution and source code to the Fluent XAML Theme Editor - a tool that helps demonstrate the flexibility of the [Fluent Design System](https://www.microsoft.com/design/fluent/) as well as supports the app development process by generating XAML markup for our ResourceDictionary framework used in Universal Windows Platform (UWP) applications.
 
