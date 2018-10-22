@@ -225,6 +225,7 @@
     <None Include="FluentEditorShared.nuspec">
       <SubType>Designer</SubType>
     </None>
+    <PRIResource Include="Resources\zh-cn\Resources.resw" />
     <PRIResource Include="Resources\nl-nl\Resources.resw" />
     <PRIResource Include="Resources\es-es\Resources.resw" />
     <PRIResource Include="Resources\fr-fr\Resources.resw" />

@@ -1,0 +1,11 @@
+﻿{
+  "Demos": [
+    {
+      "Type": "ControlPalette",
+      "Id": "ControlPalette",
+      "Title": "控件配色示例",
+      "Glyph": ""
+    }
+  ],
+  "DefaultDemoId": "ControlPalette"
+}
