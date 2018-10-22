@@ -23,7 +23,7 @@ Additionally, to stay on top of the latest updates to Windows and the developmen
    
 Store version of tool
 ---
-If you're not looking to be apart of this open source project and instead would just like to use the app itself, please to go the Microsfot Store version of this tool and [download it there](https://www.microsoft.com/store/apps/9N2XD3Q8X57C).
+If you're not looking to be apart of this open source project and instead would just like to use the app itself, please to go the Microsoft Store version of this tool and [download it there](https://www.microsoft.com/store/apps/9N2XD3Q8X57C).
 
 Using the tool
 ---
