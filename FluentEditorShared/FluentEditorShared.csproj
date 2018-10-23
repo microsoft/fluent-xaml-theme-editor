@@ -232,6 +232,7 @@
     <PRIResource Include="Resources\it-it\Resources.resw" />
     <PRIResource Include="Resources\en-us\Resources.resw" />
     <PRIResource Include="Resources\pl-pl\Resources.resw" />
+    <PRIResource Include="Resources\pt-pt\Resources.resw" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

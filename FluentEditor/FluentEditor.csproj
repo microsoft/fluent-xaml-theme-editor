@@ -354,9 +354,12 @@
     <Content Include="Resources\nl-nl\demodata.json" />
     <Content Include="Resources\zh-cn\controlPaletteData.json" />
     <Content Include="Resources\zh-cn\demodata.json" />
+    <Content Include="Resources\pt-pt\controlPaletteData.json" />
+    <Content Include="Resources\pt-pt\demodata.json" />
     <PRIResource Include="Resources\zh-cn\Resources.resw" />
     <PRIResource Include="Resources\nl-nl\Resources.resw" />
     <PRIResource Include="Resources\es-es\Resources.resw" />
+    <PRIResource Include="Resources\pt-pt\Resources.resw" />
     <None Include="FluentEditor_TemporaryKey.pfx" />
     <Content Include="Resources\en-us\controlPaletteData.json" />
     <Content Include="Resources\fr-fr\controlPaletteData.json" />
