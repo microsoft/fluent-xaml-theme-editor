@@ -2,7 +2,7 @@
 Fluent XAML Theme Editor 
 ===
 
-![using component overrides](XamlThemeEditor_screenshot.png)
+![using component overrides](README_Images/XamlThemeEditor_screenshot.png)
 
 This repo contains the full solution and source code to the Fluent XAML Theme Editor - a tool that helps demonstrate the flexibility of the [Fluent Design System](https://www.microsoft.com/design/fluent/) as well as supports the app development process by generating XAML markup for our ResourceDictionary framework used in Universal Windows Platform (UWP) applications.
 
@@ -23,11 +23,158 @@ Additionally, to stay on top of the latest updates to Windows and the developmen
    
 Store version of tool
 ---
-If you're not looking to be apart of this open source project and instead would just like to use the app itself, please to go the Microsfot Store version of this tool and [download it there](https://www.microsoft.com/store/apps/9N2XD3Q8X57C).
+If you're not looking to be apart of this open source project and instead would just like to use the app itself, please to go the Microsoft Store version of this tool and [download it there](https://www.microsoft.com/store/apps/9N2XD3Q8X57C).
 
-Using the tool
+How to use the tool
 ---
-If you wish to get access to the source code without using Git you can download the zip file directly by clicking on the "Clone or Download" dropdown button at the top right of the repo landing page and selecting the last option labeled "Download Zip".
+With the preview build, you can select three major colors for both the Light and Dark themes in the right-hand properties view labeled “Color Dictionary”.
+
+![color properties window](README_Images/RegionBasePrimary_Properties.png)
+
+ - **Region** – The background that all the controls sit on, which is a separate resource that does not exist in our framework.
+ - **Base** – Represents all our controls’ backplates and their temporary state visuals like hover or press. In general, Base should be in contrast with the background (or Region color) of your theme and with black text (if in Light theme) and white text (if in Dark theme).
+ - **Primary** – This is essentially the Accent color and should contrast with mainly white text. It is also used in more choice locations to show alternate rest states for toggled controls like list selection, checkbox or radiobutton checked states, slider fill values, and other control parts that need to be shown as different from their default rest state once interacted with.
+ 
+Refining the colors
+---
+In addition to the three major colors for each theme, you can also expand any one of the major colors to see a list of minor colors that change the look of only certain control parts - this basically allows you to get more detailed with your color choices for states.
+
+![color properties window details](README_Images/RegionBasePrimary_DetailColorProperties.png)
+
+To access the detailed view of colors, simply click the chevron next to the major color button swatches.
+
+Creating, saving and loading presets
+---
+The editor will ship with some presets for you to look at to get an idea of what a theme looks like in the app. The preset dropdown is located at the top of the Color Dictionary properties panel.
+
+When you first boot up it will always be set to Default – which is the Light and Dark theme styling default for all our controls. You can select different themes like Lavender and Nighttime to get an idea of how the tool will theme our controls.
+
+Once you’re ready to start making your own theme, just start editing the colors! Once you’ve started tweaking them, you’ll notice that the Presets ComboBox goes from the name of the preset to “Custom”:
+
+This means that you’ve started a new temporary theme that’s “Custom.” Any changes you make will not affect any of the other Presets in that box.
+
+ - Once you’re satisfied with the changes you’ve made, simply click the “Save” button and browse to your desired save point.
+ - Similarly, you can open your saved JSON theme by clicking the “Load” button and browsing to your saved theme’s file location.
+ 
+Checking contrast ratio
+---
+The last part of the theme editor is probably one of the most important parts of creating your theme, and that is to make sure that in either respective theme you are contrast compliant. The tool provides you with a small list of contrast information on the left-hand side of the color selection window when choosing your color.
+
+![contrast panel example](README_Images/ColorContrast_Good.png)
+
+In this window you can see your contrast with the most prevalent text color in the theme that you’re choosing to edit, in the above case black text because you are editing a Light theme color value.
+
+When you pick a color that falls below the standard contrast ratio of **4.5:1**, you’ll be alerted with red text next to your contrast value.
+
+![contrast panel bad example](README_Images/ColorContrast_Bad.png)
+
+You can learn more about [contrast ratios and their importance here](https://docs.microsoft.com/en-us/windows/uwp/design/accessibility/accessible-text-requirements).
+
+Exporting and using your theme in a UWP app
+---
+Once you’ve themed everything, you’ll want to use it in your app! To do that you’ll need to click the “Export” button at the bottom of the Color Dictionary properties panel.
+
+![export theme](README_Images/ExportTheme.png)
+
+That button will open a popup window with a generic, unnamed ResourceDictionary stub (seen below).
+
+![export theme popup](README_Images/ExportTheme_Popup.png)
+
+This window doesn’t make anything final, however, if you want to make some changes to the theme and re-export them to the Export window, it will refresh with your changed color values.
+
+However, once you’re ready to use it in your app, click the “Copy to Clipboard” button in the lower right corner and go to UWP Visual Studio solution.
+
+Once in Visual Studio, right-click on the project solution, located in the Solution Explorer.
+
+![creating resource dictionary Visual Studio](README_Images/VisualStudio_CreateResourceDictionary.png)
+
+And go to Add > New Item and then choose Resource Dictionary.
+
+![creating resource dictionary Visual Studio](README_Images/VisualStudio_CreateResourceDictionary_2.png)
+
+Name that dictionary whatever makes sense to you and click Add when you’re done.
+
+![creating resource dictionary Visual Studio](README_Images/VisualStudio_CreateResourceDictionary_3.png)
+
+That should generate a blank ResourceDictionary like this:
+
+```xaml
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyAppName">
+    
+</ResourceDictionary>
+```
+
+Now you can paste the exported theme code from the editor into that ResourceDictionary.
+
+```xaml
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyAppName">
+    
+    <!-- Free Public License 1.0.0 Permission to use, copy, modify, and/or distribute this code for any purpose with or without fee is hereby granted. -->
+    <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Default">
+            <ResourceDictionary.MergedDictionaries>
+                <ColorPaletteResources Accent="#FF0073CF" AltHigh="#FF000000" AltLow="#FF000000" AltMedium="#FF000000" AltMediumHigh="#FF000000" AltMediumLow="#FF000000" BaseHigh="#FFFFFFFF" BaseLow="#FF333333" BaseMedium="#FF9A9A9A" BaseMediumHigh="#FFB4B4B4" BaseMediumLow="#FF676767" ChromeAltLow="#FFB4B4B4" ChromeBlackHigh="#FF000000" ChromeBlackLow="#FFB4B4B4" ChromeBlackMedium="#FF000000" ChromeBlackMediumLow="#FF000000" ChromeDisabledHigh="#FF333333" ChromeDisabledLow="#FF9A9A9A" ChromeGray="#FF808080" ChromeHigh="#FF808080" ChromeLow="#FF151515" ChromeMedium="#FF1D1D1D" ChromeMediumLow="#FF2C2C2C" ChromeWhite="#FFFFFFFF" ListLow="#FF1D1D1D" ListMedium="#FF333333" />
+                <ResourceDictionary>
+                    <Color x:Key="SystemChromeAltMediumHighColor">#CC000000</Color>
+                    <Color x:Key="SystemChromeAltHighColor">#FF000000</Color>
+                    <Color x:Key="SystemRevealListLowColor">#FF1D1D1D</Color>
+                    <Color x:Key="SystemRevealListMediumColor">#FF333333</Color>
+                    <Color x:Key="RegionColor">#FF000000</Color>
+                    <SolidColorBrush x:Key="RegionBrush" Color="{StaticResource RegionColor}" />
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="Light">
+            <ResourceDictionary.MergedDictionaries>
+                <ColorPaletteResources Accent="#FF0073CF" AltHigh="#FFFFFFFF" AltLow="#FFFFFFFF" AltMedium="#FFFFFFFF" AltMediumHigh="#FFFFFFFF" AltMediumLow="#FFFFFFFF" BaseHigh="#FF000000" BaseLow="#FFCCCCCC" BaseMedium="#FF898989" BaseMediumHigh="#FF5D5D5D" BaseMediumLow="#FF737373" ChromeAltLow="#FF5D5D5D" ChromeBlackHigh="#FF000000" ChromeBlackLow="#FFCCCCCC" ChromeBlackMedium="#FF5D5D5D" ChromeBlackMediumLow="#FF898989" ChromeDisabledHigh="#FFCCCCCC" ChromeDisabledLow="#FF898989" ChromeGray="#FF737373" ChromeHigh="#FFCCCCCC" ChromeLow="#FFECECEC" ChromeMedium="#FFE6E6E6" ChromeMediumLow="#FFECECEC" ChromeWhite="#FFFFFFFF" ListLow="#FFE6E6E6" ListMedium="#FFCCCCCC" />
+                <ResourceDictionary>
+                    <Color x:Key="SystemChromeAltMediumHighColor">#CCFFFFFF</Color>
+                    <Color x:Key="SystemChromeAltHighColor">#FFFFFFFF</Color>
+                    <Color x:Key="SystemRevealListLowColor">#FFE6E6E6</Color>
+                    <Color x:Key="SystemRevealListMediumColor">#FFCCCCCC</Color>
+                    <RevealBackgroundBrush x:Key="SystemControlHighlightListLowRevealBackgroundBrush" TargetTheme="Light" Color="{ThemeResource SystemRevealListMediumColor}" FallbackColor="{ StaticResource SystemListMediumColor}" />
+                    <Color x:Key="RegionColor">#FFFFFFFF</Color>
+                    <SolidColorBrush x:Key="RegionBrush" Color="{StaticResource RegionColor}" />
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="HighContrast">
+            <StaticResource x:Key="RegionColor" ResourceKey="SystemColorWindowColor" />
+            <SolidColorBrush x:Key="RegionBrush" Color="{StaticResource RegionColor}" />
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+    
+</ResourceDictionary>
+```
+Now you have a fully customized color theme waiting to be use, so let’s apply it!
+
+To do that, you’ll want to go into your page or app.xaml (depending on how much of your app you want the theme to apply to) and merge your theme dictionary into the resources of that page or app.
+
+```xaml
+<Page.Resources>
+   <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+         <ResourceDictionary Source="PurpleGreenTheme.xaml"/>
+      </ResourceDictionary.MergedDictionaries>
+   </ResourceDictionary>
+</Page.Resources>
+```
+
+Lastly, don’t forget to set the background color of your page to the RegionColor that you picked for your theme. It’s the only brush that won’t get set automatically.
+
+```xaml
+<Grid Background="{ThemeResource RegionBrush}">
+   <!-- Your page layout/content here -->
+</Grid>
+```
+
+Once that’s in, you’re done! Your theme colors will now be pervasive across your app or page depending.
 
 Using ColorPaletteResources in code-behind
 ---
