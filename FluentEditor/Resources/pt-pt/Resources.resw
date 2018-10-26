@@ -214,7 +214,7 @@
     <value>Vista de calendário</value>
   </data>
   <data name="TestContentCheckboxBlock.Text" xml:space="preserve">
-    <value>Checkbox</value>
+    <value>Caixa de Seleção</value>
   </data>
   <data name="TestContentCheckedCheckbox.Content" xml:space="preserve">
     <value>Selecionada</value>
@@ -223,7 +223,7 @@
     <value>Selecionado</value>
   </data>
   <data name="TestContentComboBlock.Text" xml:space="preserve">
-    <value>Combo Box</value>
+    <value>Caixa Combo</value>
   </data>
   <data name="TestContentComboItem1.Content" xml:space="preserve">
     <value>Elemento 1</value>
@@ -307,7 +307,7 @@
     <value>Botão comutável</value>
   </data>
   <data name="TestContentToggledButton.Content" xml:space="preserve">
-    <value>Botón comutádo</value>
+    <value>Botão comutado</value>
   </data>
   <data name="TestContentUncheckedCheckbox.Content" xml:space="preserve">
     <value>Não selecionada</value>
