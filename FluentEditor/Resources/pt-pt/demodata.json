@@ -2,7 +2,7 @@
     "Demos": [{
         "Type": "ControlPalette",
         "Id": "ControlPalette",
-        "Title": "Demostración de paleta de controles",
+        "Title": "Demostração da palete de controlos",
         "Glyph": ""
     }],
     "DefaultDemoId": "ControlPalette"
