@@ -58,6 +58,15 @@ namespace FluentEditor.ControlPalette.Model
             sb.AppendLine(string.Format("                <Color x:Key=\"SystemRevealListLowColor\">{0}</Color>", model.DarkBase.Palette[8].ActiveColor.ToString()));
             sb.AppendLine(string.Format("                <Color x:Key=\"SystemRevealListMediumColor\">{0}</Color>", model.DarkBase.Palette[5].ActiveColor.ToString()));
 
+            sb.AppendLine("                <!-- Override system generated accent colors -->");
+            sb.AppendLine(string.Format("                <Color x:Key=\"SystemAccentColorDark1\">{0}</Color>", model.DarkPrimary.Palette[4].ActiveColor.ToString()));
+            sb.AppendLine(string.Format("                <Color x:Key=\"SystemAccentColorDark2\">{0}</Color>", model.DarkPrimary.Palette[3].ActiveColor.ToString()));
+            sb.AppendLine(string.Format("                <Color x:Key=\"SystemAccentColorDark3\">{0}</Color>", model.DarkPrimary.Palette[2].ActiveColor.ToString()));
+
+            sb.AppendLine(string.Format("                <Color x:Key=\"SystemAccentColorLight1\">{0}</Color>", model.DarkPrimary.Palette[6].ActiveColor.ToString()));
+            sb.AppendLine(string.Format("                <Color x:Key=\"SystemAccentColorLight2\">{0}</Color>", model.DarkPrimary.Palette[7].ActiveColor.ToString()));
+            sb.AppendLine(string.Format("                <Color x:Key=\"SystemAccentColorLight3\">{0}</Color>", model.DarkPrimary.Palette[8].ActiveColor.ToString()));
+
             sb.AppendLine(string.Format("                <Color x:Key=\"RegionColor\">{0}</Color>", model.DarkRegion.ActiveColor.ToString()));
             sb.AppendLine("                <SolidColorBrush x:Key=\"RegionBrush\" Color=\"{StaticResource RegionColor}\" />");
             if (showAllColors)
@@ -138,6 +147,15 @@ namespace FluentEditor.ControlPalette.Model
             sb.AppendLine(string.Format("                <Color x:Key=\"SystemChromeAltHighColor\">{0}</Color>", model.LightRegion.ActiveColor.ToString()));
             sb.AppendLine(string.Format("                <Color x:Key=\"SystemRevealListLowColor\">{0}</Color>", model.LightBase.Palette[1].ActiveColor.ToString()));
             sb.AppendLine(string.Format("                <Color x:Key=\"SystemRevealListMediumColor\">{0}</Color>", model.LightBase.Palette[5].ActiveColor.ToString()));
+
+            sb.AppendLine("                <!-- Override system generated accent colors -->");
+            sb.AppendLine(string.Format("                <Color x:Key=\"SystemAccentColorLight1\">{0}</Color>", model.LightPrimary.Palette[4].ActiveColor.ToString()));
+            sb.AppendLine(string.Format("                <Color x:Key=\"SystemAccentColorLight2\">{0}</Color>", model.LightPrimary.Palette[3].ActiveColor.ToString()));
+            sb.AppendLine(string.Format("                <Color x:Key=\"SystemAccentColorLight3\">{0}</Color>", model.LightPrimary.Palette[2].ActiveColor.ToString()));
+
+            sb.AppendLine(string.Format("                <Color x:Key=\"SystemAccentColorDark1\">{0}</Color>", model.LightPrimary.Palette[6].ActiveColor.ToString()));
+            sb.AppendLine(string.Format("                <Color x:Key=\"SystemAccentColorDark2\">{0}</Color>", model.LightPrimary.Palette[7].ActiveColor.ToString()));
+            sb.AppendLine(string.Format("                <Color x:Key=\"SystemAccentColorDark3\">{0}</Color>", model.LightPrimary.Palette[8].ActiveColor.ToString()));
 
             sb.AppendLine("                <RevealBackgroundBrush x:Key=\"SystemControlHighlightListLowRevealBackgroundBrush\" TargetTheme=\"Light\" Color=\"{ThemeResource SystemRevealListMediumColor}\" FallbackColor=\"{ StaticResource SystemListMediumColor}\" />");
 
