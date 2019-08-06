@@ -1,4 +1,3 @@
-
 ---
 page_type: sample
 name: Fluent Xaml Theme Editor
