@@ -1,4 +1,16 @@
 
+---
+page_type: sample
+name: Fluent Xaml Theme Editor
+languages:
+  - csharp
+  - xaml
+products:
+  - windows
+  - windows-uwp
+description: A tool and sample app that shows you how to theme your app effortlessly. Jumpstarting this by also giving you lightweight toolability to see your custom theme come to life in your app.
+---
+
 Fluent XAML Theme Editor 
 ===
 
