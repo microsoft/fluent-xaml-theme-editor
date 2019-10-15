@@ -54,13 +54,13 @@ namespace FluentEditor.ControlPalette.Model
                 }
             }
             sb.AppendLine(" />");
-            sb.AppendLine("            <ResourceDictionary>");
+            sb.AppendLine("                <ResourceDictionary>");
 
             if (model.DarkColorMapping != null)
             {
                 foreach (var m in model.DarkColorMapping)
                 {
-                    sb.AppendLine($"                <BelowWindows10version1809:Color x:Key=\"System{m.Target.ToString()}Color\">{m.Source.ActiveColor.ToString()}</BelowWindows10version1809:Color>");
+                    sb.AppendLine($"                    <BelowWindows10version1809:Color x:Key=\"System{m.Target.ToString()}Color\">{m.Source.ActiveColor.ToString()}</BelowWindows10version1809:Color>");
                 }
             }
 
