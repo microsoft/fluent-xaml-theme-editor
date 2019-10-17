@@ -144,8 +144,8 @@
   <data name="ControlPaletteExportButton.Content" xml:space="preserve">
     <value>Export</value>
   </data>
-  <data name="ControlPaletteInspectorHeader.Text" xml:space="preserve">
-    <value>Color dictionary</value>
+  <data name="ControlPaletteInspectorHeader.Content" xml:space="preserve">
+    <value>Color</value>
   </data>
   <data name="ControlPaletteLightTestContent.Title" xml:space="preserve">
     <value>Light theme</value>

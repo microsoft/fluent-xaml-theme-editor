@@ -154,11 +154,6 @@
             <AppBarButton x:Uid="TestContentAppBarButton" />
         </CommandBar>
         <TextBlock
-            x:Uid="TestContentCalendarViewBlock"
-            Margin="0,0,0,16"
-            Style="{StaticResource BaseTextBlockStyle}" />
-        <CalendarView Margin="0,0,0,28" HorizontalAlignment="Stretch" />
-        <TextBlock
             x:Uid="TestContentDatePickerBlock"
             Margin="0,0,0,16"
             Style="{StaticResource BaseTextBlockStyle}" />
@@ -168,6 +163,11 @@
             Margin="0,0,0,16"
             Style="{StaticResource BaseTextBlockStyle}" />
         <TimePicker Margin="0,0,0,0" HorizontalAlignment="Stretch" />
+        <TextBlock
+            x:Uid="TestContentCalendarViewBlock"
+            Margin="0,0,0,16"
+            Style="{StaticResource BaseTextBlockStyle}" />
+        <CalendarView Margin="0,0,0,28" HorizontalAlignment="Stretch" />        
 
     </StackPanel>
 </UserControl>

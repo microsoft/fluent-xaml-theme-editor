@@ -8,12 +8,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Application.Resources>
+
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
                 <ResourceDictionary Source="ms-appx:///FluentEditorShared/FluentEditorSharedResources.xaml" />
-                <ResourceDictionary>
-
+            </ResourceDictionary.MergedDictionaries>
                     <ResourceDictionary.ThemeDictionaries>
                         <ResourceDictionary x:Key="Default">
                             <SolidColorBrush x:Key="AppBackgroundBrush" Color="#FF232323" />
@@ -70,9 +70,6 @@
                             <SolidColorBrush x:Key="ExpanderButtonStyleIndeterminateDisabledForegroundBrush" Color="{ThemeResource SystemColorButtonTextColor}" />
                         </ResourceDictionary>
                     </ResourceDictionary.ThemeDictionaries>
-
-                </ResourceDictionary>
-            </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 
     </Application.Resources>
