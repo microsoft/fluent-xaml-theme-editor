@@ -20,7 +20,7 @@
                             <SolidColorBrush x:Key="AppContentBackgroundBrush" Color="#FF282828" />
                             <SolidColorBrush x:Key="ContentSpacerBrush" Color="#FF1F1F1F" />
 
-                            <SolidColorBrush x:Key="ExpanderButtonStyleNormalForegroundBrush" Color="{StaticResource SystemBaseHighColor}" />
+                    <SolidColorBrush x:Key="ExpanderButtonStyleNormalForegroundBrush" Color="{StaticResource SystemBaseHighColor}" />
                             <SolidColorBrush x:Key="ExpanderButtonStylePointerOverForegroundBrush" Color="{StaticResource SystemBaseHighColor}" />
                             <SolidColorBrush x:Key="ExpanderButtonStylePressedForegroundBrush" Color="{StaticResource SystemBaseHighColor}" />
                             <SolidColorBrush x:Key="ExpanderButtonStyleDisabledForegroundBrush" Color="{StaticResource SystemBaseHighColor}" />

@@ -30,6 +30,17 @@
     <local:ColorToStringConverter x:Key="ColorToStringConverter" />
     <local:NullableColorToStringConverter x:Key="NullableColorToStringConverter" />
 
+    <CornerRadius x:Key="ControlCornerRadius">2</CornerRadius>
+    <CornerRadius x:Key="OverlayCornerRadius">4</CornerRadius>
+
+    <Thickness x:Key="ComboBoxBorderThemeThickness">5</Thickness>
+    <Thickness x:Key="DatePickerBorderThemeThickness">5</Thickness>
+    <Thickness x:Key="TimePickerBorderThemeThickness">5</Thickness>
+    <Thickness x:Key="TextControlBorderThemeThickness">5</Thickness>
+    <Thickness x:Key="CheckBoxBorderThemeThickness">5</Thickness>
+    <Thickness x:Key="ToggleSwitchOuterBorderStrokeThickness">5</Thickness>
+    <Thickness x:Key="RadioButtonBorderThemeThickness">5</Thickness>
+
     <Style x:Key="HitboxButton" TargetType="Button">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderBrush" Value="Transparent" />
