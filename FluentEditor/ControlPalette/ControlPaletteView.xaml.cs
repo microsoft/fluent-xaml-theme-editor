@@ -3,6 +3,7 @@
 
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 namespace FluentEditor.ControlPalette
@@ -34,6 +35,46 @@ namespace FluentEditor.ControlPalette
             base.OnNavigatedTo(e);
 
             ViewModel = e.Parameter as ControlPaletteViewModel;
+        }
+
+        private void ShapeHyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            ShowTab(ShapeTabGrid, ColorHyperlinkButton, ShapePanel);
+
+            HideTab(ColorTabGrid, ColorHyperlinkButton, ColorPanel);
+            HideTab(FontTabGrid, FontHyperlinkButton, FontPanel);
+        }
+
+        private void ColorHyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            ShowTab(ColorTabGrid, ColorHyperlinkButton, ColorPanel);
+
+            HideTab(ShapeTabGrid, ShapeHyperlinkButton, ShapePanel);
+            HideTab(FontTabGrid, FontHyperlinkButton, FontPanel);
+        }
+
+        private void FontHyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            ShowTab(FontTabGrid, FontHyperlinkButton, FontPanel);
+
+            HideTab(ShapeTabGrid, ShapeHyperlinkButton, ShapePanel);
+            HideTab(ColorTabGrid, ColorHyperlinkButton, ColorPanel);
+        }
+
+        private void ShowTab(Grid tabGrid, Control tabButton, StackPanel tabPanel)
+        {
+            tabGrid.Background = (SolidColorBrush)App.Current.Resources["ApplicationPageBackgroundThemeBrush"];
+            tabButton.Foreground = (SolidColorBrush)App.Current.Resources["SystemControlBackgroundAccentBrush"];
+            tabButton.Opacity = 1.0;
+            tabPanel.Visibility = Visibility.Visible;
+        }
+
+        private void HideTab(Grid tabGrid, Control tabButton, StackPanel tabPanel)
+        {
+            tabGrid.Background = (SolidColorBrush)App.Current.Resources["AppBackgroundBrush"];
+            tabButton.Foreground = (SolidColorBrush)App.Current.Resources["ButtonForegroundThemeBrush"];
+            tabButton.Opacity = 0.6;
+            tabPanel.Visibility = Visibility.Collapsed;
         }
     }
 }
