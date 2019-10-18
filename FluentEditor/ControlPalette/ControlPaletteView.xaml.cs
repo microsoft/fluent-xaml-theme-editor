@@ -82,10 +82,8 @@ namespace FluentEditor.ControlPalette
 
         private void ControlRoundSlider_ValueChanged(object sender, Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs e)
         {
-            CornerRadius cornerRadius = (CornerRadius)App.Current.Resources["ControlCornerRadius"];
-            App.Current.Resources["ControlCornerRadius"] = new CornerRadius(ControlRoundSlider.Value);
-
-            RefreshControls();
+            if(ExampleRoundness != null && sender != null)
+                ExampleRoundness.CornerRadius = new CornerRadius((sender as Slider).Value);
         }
 
         private void ControlRoundSliderOverlay_ValueChanged(object sender, Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs e)
@@ -209,6 +207,12 @@ namespace FluentEditor.ControlPalette
             UpdateCorners();
             UpdateOverlayCorners();
             RefreshControls();
+        }
+
+        private void RoundedTextChanged_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ExampleRoundness.CornerRadius = new CornerRadius(Double.Parse(TopLeftTB.Text), Double.Parse(TopRightTB.Text),
+                Double.Parse(BottomRightTB.Text), Double.Parse(BottomLeftTB.Text));
         }
     }
 }

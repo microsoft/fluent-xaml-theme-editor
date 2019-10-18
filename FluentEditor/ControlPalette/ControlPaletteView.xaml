@@ -258,49 +258,71 @@
                                 HorizontalAlignment="Stretch"
                                 Text="Controls"
                                 FontSize="12"/>
-                            <Slider x:Name="ControlRoundSlider" Maximum="20" Minimum="0" Value="2" HorizontalAlignment="Stretch"/>
-                            <StackPanel Orientation="Horizontal" Spacing="9">
-                                <StackPanel>
-                                    <FontIcon Glyph="&#xF5A1;" FontSize="28"/>
+                            <Slider x:Name="ControlRoundSlider" Maximum="20" Minimum="0" Value="2" HorizontalAlignment="Stretch" ValueChanged="ControlRoundSlider_ValueChanged"/>
+                            <Grid Height="100">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Column="0" Grid.Row="0">
                                     <TextBox CornerRadius="2" BorderThickness="1"
                                              x:Name="TopLeftTB"
                                              Text="{Binding Value, ElementName=ControlRoundSlider, Mode=OneWay}" 
                                              MaxLength="2" 
                                              Width="54" 
                                              GotFocus="TextBox_GotFocus"
-                                             KeyDown="TextBox_KeyDown"/>
-                                </StackPanel>
-                                <StackPanel>
-                                    <FontIcon Glyph="&#xF5A2;" FontSize="28"/>
+                                             KeyDown="TextBox_KeyDown"
+                                             TextChanged="RoundedTextChanged_TextChanged"/>
+                                </Grid>
+                                <Grid Grid.Column="2" Grid.Row="0">
                                     <TextBox CornerRadius="2" BorderThickness="1"
                                              x:Name="TopRightTB"
                                              Text="{Binding Value, ElementName=ControlRoundSlider, Mode=OneWay}" 
                                              MaxLength="2" 
                                              Width="54" 
                                              GotFocus="TextBox_GotFocus"
-                                             KeyDown="TextBox_KeyDown"/>
-                                </StackPanel>
-                                <StackPanel>
-                                    <FontIcon Glyph="&#xF5A4;" FontSize="28"/>
+                                             KeyDown="TextBox_KeyDown"
+                                             TextChanged="RoundedTextChanged_TextChanged"/>
+                                </Grid>
+                                <Grid Grid.Column="0" Grid.Row="2">
                                     <TextBox CornerRadius="2" BorderThickness="1"
                                              x:Name="BottomRightTB"
                                              Text="{Binding Value, ElementName=ControlRoundSlider, Mode=OneWay}" 
                                              MaxLength="2" 
                                              Width="54" 
                                              GotFocus="TextBox_GotFocus"
-                                             KeyDown="TextBox_KeyDown"/>
-                                </StackPanel>
-                                <StackPanel>
-                                    <FontIcon Glyph="&#xF5A3;" FontSize="28"/>
+                                             KeyDown="TextBox_KeyDown"
+                                             TextChanged="RoundedTextChanged_TextChanged"/>
+                                </Grid>
+                                <Grid Grid.Column="2" Grid.Row="2">
                                     <TextBox CornerRadius="2" BorderThickness="1"
                                              x:Name="BottomLeftTB"
                                              Text="{Binding Value, ElementName=ControlRoundSlider, Mode=OneWay}" 
                                              MaxLength="2" 
                                              Width="54" 
                                              GotFocus="TextBox_GotFocus"
-                                             KeyDown="TextBox_KeyDown"/>
-                                </StackPanel>
-                            </StackPanel>
+                                             KeyDown="TextBox_KeyDown"
+                                             TextChanged="RoundedTextChanged_TextChanged"/>
+                                </Grid>
+
+                                <Grid x:Name="ExampleRoundness"
+                                    Grid.Column="1"
+                                    Grid.Row="1" 
+                                    HorizontalAlignment="Stretch" 
+                                    VerticalAlignment="Stretch" 
+                                    Background="{ThemeResource ButtonBackgroundThemeBrush}"
+                                    Margin="2"
+                                    Padding="2"
+                                      BorderBrush="{ThemeResource TextBoxButtonForegroundThemeBrush}"
+                                      BorderThickness="1"/>
+                                <TextBlock Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Control" Foreground="Black"/>
+                            </Grid>
 
                             <TextBlock
                                 Margin="0, 15, 0, 0"
