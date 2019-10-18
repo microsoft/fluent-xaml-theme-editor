@@ -90,7 +90,6 @@ namespace FluentEditor.ControlPalette
 
         private void ControlRoundSliderOverlay_ValueChanged(object sender, Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs e)
         {
-            CornerRadius cornerRadius = (CornerRadius)App.Current.Resources["OverlayCornerRadius"];
             App.Current.Resources["OverlayCornerRadius"] = new CornerRadius(ControlRoundSliderOverlay.Value);
         }
 
@@ -109,11 +108,6 @@ namespace FluentEditor.ControlPalette
             textBox.SelectAll();
         }
 
-        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
-        {
-            UpdateCorners();
-        }
-
         private void UpdateCorners()
         {
             App.Current.Resources["ControlCornerRadius"] =
@@ -130,26 +124,27 @@ namespace FluentEditor.ControlPalette
             }
         }
 
-        private void ControlBorderThicknessSlider_ValueChanged(object sender, Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs e)
-        {
-            UpdateBorderThickness(new Thickness(ControlBorderThicknessSlider.Value));
-            RefreshControls();
-        }
-
         private void UpdateBorderThickness(Thickness value)
         {
             App.Current.Resources["ComboBoxBorderThemeThickness"] = value;
             App.Current.Resources["DatePickerBorderThemeThickness"] = value;
             App.Current.Resources["TimePickerBorderThemeThickness"] = value;
             App.Current.Resources["TextControlBorderThemeThickness"] = value;
-            App.Current.Resources["CheckBoxBorderThemeThickness"] = value;
-            App.Current.Resources["ToggleSwitchOuterBorderStrokeThickness"] = value;
-            App.Current.Resources["RadioButtonBorderThemeThickness"] = value;
+
+            App.Current.Resources["ToggleSwitchOuterBorderStrokeThickness"] = EqualizeThicknessValue(value);
+            App.Current.Resources["CheckBoxBorderThemeThickness"] = EqualizeThicknessValue(value);
+            App.Current.Resources["RadioButtonBorderThemeThickness"] = EqualizeThicknessValue(value);
         }
 
-        private void TextBoxOverlay_LostFocus(object sender, RoutedEventArgs e)
+        private Thickness EqualizeThicknessValue(Thickness before)
         {
-            UpdateOverlayCorners();
+            Thickness after = new Thickness(1);
+            double finalEqualValue = Math.Max(Math.Max(Math.Max(before.Left, before.Right), before.Top), before.Bottom);
+
+            if (finalEqualValue > 0)
+                after = new Thickness(finalEqualValue);
+
+            return after;
         }
 
         private void UpdateOverlayCorners()
@@ -167,11 +162,52 @@ namespace FluentEditor.ControlPalette
             }
         }
 
-        private void TextBoxBorder_LostFocus(object sender, RoutedEventArgs e)
+        private void TextBoxBorder_KeyDown(object sender, Windows.UI.Xaml.Input.KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Enter)
+            {
+                UpdateBorderThickness(new Thickness(Double.Parse(LeftBorderTB.Text), Double.Parse(TopBorderTB.Text),
+                Double.Parse(RightBorderTB.Text), Double.Parse(BottomBorderTB.Text)));
+
+                RefreshControls();
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             UpdateBorderThickness(new Thickness(Double.Parse(LeftBorderTB.Text), Double.Parse(TopBorderTB.Text),
                 Double.Parse(RightBorderTB.Text), Double.Parse(BottomBorderTB.Text)));
+            UpdateCorners();
+            UpdateOverlayCorners();
 
+            RefreshControls();
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox comboBox = sender as ComboBox;
+
+            if (ControlBorderThicknessSlider == null)
+                return;
+
+            if (comboBox.SelectedIndex == 1)
+            {
+                ControlBorderThicknessSlider.Value = 2;
+                ControlRoundSlider.Value = 0;
+                ControlRoundSliderOverlay.Value = 0;
+            }
+            else
+            {
+                ControlBorderThicknessSlider.Value = 1;
+                ControlRoundSlider.Value = 2;
+                ControlRoundSliderOverlay.Value = 4;
+                
+            }
+
+            UpdateBorderThickness(new Thickness(Double.Parse(LeftBorderTB.Text), Double.Parse(TopBorderTB.Text),
+                Double.Parse(RightBorderTB.Text), Double.Parse(BottomBorderTB.Text)));
+            UpdateCorners();
+            UpdateOverlayCorners();
             RefreshControls();
         }
     }

@@ -163,7 +163,7 @@
     <value>Unable to load</value>
   </data>
   <data name="ControlPalettePresetCombo.Header" xml:space="preserve">
-    <value>Presets</value>
+    <value>Color Presets</value>
   </data>
   <data name="ControlPalettePresetCombo.PlaceholderText" xml:space="preserve">
     <value>Custom</value>

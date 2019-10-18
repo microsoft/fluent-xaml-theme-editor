@@ -14,11 +14,15 @@
             <SolidColorBrush x:Key="PaletteEditorDividerBrush" Color="#FF424242" />
             <SolidColorBrush x:Key="PaletteEntryEditorBorderBrush" Color="Transparent" />
             <Thickness x:Key="PaletteEntryEditorBorderThickness">0 0 0 0</Thickness>
+
+            <AcrylicBrush x:Key="SystemControlAcrylicWindowBrush" BackgroundSource="HostBackdrop" TintColor="{ThemeResource SystemChromeAltHighColor_Dark}" TintOpacity="0.8" FallbackColor="{ThemeResource SystemChromeMediumColor_Dark}" />
         </ResourceDictionary>
         <ResourceDictionary x:Key="Light">
             <SolidColorBrush x:Key="PaletteEditorDividerBrush" Color="#FF424242" />
             <SolidColorBrush x:Key="PaletteEntryEditorBorderBrush" Color="Transparent" />
             <Thickness x:Key="PaletteEntryEditorBorderThickness">0 0 0 0</Thickness>
+
+            <AcrylicBrush x:Key="SystemControlAcrylicWindowBrush" BackgroundSource="HostBackdrop" TintColor="{ThemeResource SystemChromeAltHighColor}" TintOpacity="0.8" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
         </ResourceDictionary>
         <ResourceDictionary x:Key="HighContrast">
             <SolidColorBrush x:Key="PaletteEditorDividerBrush" Color="#FF000000" />
@@ -30,16 +34,25 @@
     <local:ColorToStringConverter x:Key="ColorToStringConverter" />
     <local:NullableColorToStringConverter x:Key="NullableColorToStringConverter" />
 
+    <Color x:Key="SystemAccentColor">#ff0073CF</Color>
+    <Color x:Key="SystemChromeAltHighColor">#FF32a852</Color>
+    <Color x:Key="SystemChromeMediumColor">#FF32a852</Color>
+
+    <Color x:Key="SystemChromeAltHighColor_Dark">#FF2B2B2B</Color>
+    <Color x:Key="SystemChromeMediumColor_Dark">#FF2B2B2B</Color>
+
+    <AcrylicBrush x:Key="SystemControlAccentAcrylicWindowAccentMediumHighBrush" BackgroundSource="HostBackdrop" TintColor="{ThemeResource SystemAccentColor}" TintOpacity="0.8" FallbackColor="{ThemeResource SystemAccentColor}" />
+
     <CornerRadius x:Key="ControlCornerRadius">2</CornerRadius>
     <CornerRadius x:Key="OverlayCornerRadius">4</CornerRadius>
 
-    <Thickness x:Key="ComboBoxBorderThemeThickness">5</Thickness>
-    <Thickness x:Key="DatePickerBorderThemeThickness">5</Thickness>
-    <Thickness x:Key="TimePickerBorderThemeThickness">5</Thickness>
-    <Thickness x:Key="TextControlBorderThemeThickness">5</Thickness>
-    <Thickness x:Key="CheckBoxBorderThemeThickness">5</Thickness>
-    <Thickness x:Key="ToggleSwitchOuterBorderStrokeThickness">5</Thickness>
-    <Thickness x:Key="RadioButtonBorderThemeThickness">5</Thickness>
+    <Thickness x:Key="ComboBoxBorderThemeThickness">1</Thickness>
+    <Thickness x:Key="DatePickerBorderThemeThickness">1</Thickness>
+    <Thickness x:Key="TimePickerBorderThemeThickness">1</Thickness>
+    <Thickness x:Key="TextControlBorderThemeThickness">1</Thickness>
+    <Thickness x:Key="CheckBoxBorderThemeThickness">1</Thickness>
+    <Thickness x:Key="ToggleSwitchOuterBorderStrokeThickness">1</Thickness>
+    <Thickness x:Key="RadioButtonBorderThemeThickness">1</Thickness>
 
     <Style x:Key="HitboxButton" TargetType="Button">
         <Setter Property="Background" Value="Transparent" />

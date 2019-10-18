@@ -107,7 +107,7 @@
             Grid.Column="2"
             Margin="0,12,12,12"
             ColorChanged="ColorPicker_ColorChanged"
-            Color="{x:Bind Path=ColorPaletteEntry.ActiveColor, Mode=OneWay}" />
+            Color="{x:Bind Path=ColorPaletteEntry.ActiveColor, Mode=OneWay}"/>
 
         <Button
             x:Name="RevertButton"
