@@ -41,6 +41,12 @@
     <Color x:Key="SystemChromeAltHighColor_Dark">#FF2B2B2B</Color>
     <Color x:Key="SystemChromeMediumColor_Dark">#FF2B2B2B</Color>
 
+    <SolidColorBrush x:Key="AccentButtonBackgroundPointerOver" Color="{ThemeResource SystemAccentColor}" Opacity="0.8"/>
+    <SolidColorBrush x:Key="AccentButtonBackgroundPressed" Color="{ThemeResource SystemAccentColor}" Opacity="0.6"/>
+    <SolidColorBrush x:Key="ToggleButtonBackgroundPointerOver" Color="{ThemeResource SystemAccentColor}" Opacity="0.8"/>
+    <SolidColorBrush x:Key="ToggleButtonBackgroundPressed" Color="{ThemeResource SystemAccentColor}" Opacity="0.6"/>
+    <SolidColorBrush x:Key="ToggleButtonBackgroundCheckedPointerOver" Color="{ThemeResource SystemAccentColor}" Opacity="0.8"/>
+    <SolidColorBrush x:Key="ToggleButtonBackgroundCheckedPressed" Color="{ThemeResource SystemAccentColor}" Opacity="0.6"/>
     <AcrylicBrush x:Key="SystemControlAccentAcrylicWindowAccentMediumHighBrush" BackgroundSource="HostBackdrop" TintColor="{ThemeResource SystemAccentColor}" TintOpacity="0.8" FallbackColor="{ThemeResource SystemAccentColor}" />
 
     <CornerRadius x:Key="ControlCornerRadius">2</CornerRadius>

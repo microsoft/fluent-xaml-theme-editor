@@ -223,8 +223,8 @@ namespace FluentEditor.ControlPalette
 
             if (IsSettingDarkColors(_source.Title, "Dark Base"))
             {
-                App.Current.Resources["SystemChromeAltHighColor_Dark"] = _targetResources.ChromeMediumLow;
-                App.Current.Resources["SystemChromeMediumColor_Dark"] = _targetResources.ChromeMediumLow;
+                App.Current.Resources["SystemChromeAltHighColor_Dark"] = _targetResources.BaseLow;
+                App.Current.Resources["SystemChromeMediumColor_Dark"] = _targetResources.BaseLow;
             }
         }
 

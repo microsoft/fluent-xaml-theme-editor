@@ -168,10 +168,10 @@
             x:Uid="TestContentCalendarViewBlock"
             Margin="0,0,0,16"
             Style="{StaticResource BaseTextBlockStyle}" />
-        <Grid HorizontalAlignment="Stretch" Height="120" Background="{ThemeResource SystemControlAcrylicWindowBrush}" Margin="0, 0, 0, 16">
+        <Grid HorizontalAlignment="Stretch" Height="120" Background="{ThemeResource SystemControlAcrylicWindowBrush}" Margin="0, 0, 0, 16" CornerRadius="{ThemeResource ControlCornerRadius}">
             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="Base Acrylic" FontStyle="Italic" Margin="5"/>
         </Grid>
-        <Grid HorizontalAlignment="Stretch" Height="120" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" Margin="0, 0, 0, 16">
+        <Grid HorizontalAlignment="Stretch" Height="120" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" Margin="0, 0, 0, 16" CornerRadius="{ThemeResource ControlCornerRadius}">
             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="Primary Acrylic" FontStyle="Italic" Margin="5" RequestedTheme="Dark"/>
         </Grid>
         <CalendarView Margin="0,0,0,28" HorizontalAlignment="Stretch" BorderThickness="{ThemeResource DatePickerBorderThemeThickness}"/>        
