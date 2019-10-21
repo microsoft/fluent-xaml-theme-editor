@@ -67,7 +67,7 @@ namespace FluentEditor.ControlPalette
         private void ShowTab(Grid tabGrid, Control tabButton, StackPanel tabPanel)
         {
             tabGrid.Background = (SolidColorBrush)App.Current.Resources["ApplicationPageBackgroundThemeBrush"];
-            tabButton.Foreground = (SolidColorBrush)App.Current.Resources["SystemControlBackgroundAccentBrush"];
+            tabButton.Foreground = (SolidColorBrush)App.Current.Resources["SystemControlForegroundChromeGrayBrush"];
             tabButton.Opacity = 1.0;
             tabPanel.Visibility = Visibility.Visible;
         }
@@ -89,6 +89,9 @@ namespace FluentEditor.ControlPalette
         private void ControlRoundSliderOverlay_ValueChanged(object sender, Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs e)
         {
             App.Current.Resources["OverlayCornerRadius"] = new CornerRadius(ControlRoundSliderOverlay.Value);
+
+            if (ExampleOverlayRoundness != null)
+                ExampleOverlayRoundness.CornerRadius = new CornerRadius(ControlRoundSliderOverlay.Value);
         }
 
         private void RefreshControls()
@@ -98,6 +101,14 @@ namespace FluentEditor.ControlPalette
 
             DarkTestContent.RequestedTheme = ElementTheme.Light;
             DarkTestContent.RequestedTheme = ElementTheme.Dark;
+
+            if(ViewModel != null)
+            {
+                ViewModel.ControlCornerRadiusValue = (CornerRadius)App.Current.Resources["ControlCornerRadius"];
+                ViewModel.OverlayCornerRadiusValue = (CornerRadius)App.Current.Resources["OverlayCornerRadius"];
+                ViewModel.ControlBorderThicknessValue = new Thickness(Double.Parse(LeftBorderTB.Text), Double.Parse(TopBorderTB.Text),
+                Double.Parse(RightBorderTB.Text), Double.Parse(BottomBorderTB.Text));
+            }
         }
 
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
@@ -108,9 +119,8 @@ namespace FluentEditor.ControlPalette
 
         private void UpdateCorners()
         {
-            App.Current.Resources["ControlCornerRadius"] =
-                new CornerRadius(Double.Parse(TopLeftTB.Text), Double.Parse(TopRightTB.Text), 
-                Double.Parse(BottomRightTB.Text), Double.Parse(BottomLeftTB.Text));
+            App.Current.Resources["ControlCornerRadius"] = new CornerRadius(Double.Parse(TopLeftTB.Text), Double.Parse(TopRightTB.Text),
+                Double.Parse(BottomLeftTB.Text), Double.Parse(BottomRightTB.Text));
             RefreshControls();
         }
 
@@ -132,6 +142,9 @@ namespace FluentEditor.ControlPalette
             App.Current.Resources["ToggleSwitchOuterBorderStrokeThickness"] = EqualizeThicknessValue(value);
             App.Current.Resources["CheckBoxBorderThemeThickness"] = EqualizeThicknessValue(value);
             App.Current.Resources["RadioButtonBorderThemeThickness"] = EqualizeThicknessValue(value);
+
+            if (BorderPreview != null)
+                BorderPreview.BorderThickness = value;
         }
 
         private Thickness EqualizeThicknessValue(Thickness before)
@@ -147,9 +160,12 @@ namespace FluentEditor.ControlPalette
 
         private void UpdateOverlayCorners()
         {
-            App.Current.Resources["OverlayCornerRadius"] =
-                new CornerRadius(Double.Parse(TopLeftTBOverlay.Text), Double.Parse(TopRightTBOverlay.Text),
-                Double.Parse(BottomRightTBOverlay.Text), Double.Parse(BottomLeftTBOverlay.Text));
+            App.Current.Resources["OverlayCornerRadius"] = new CornerRadius(Double.Parse(TopLeftTBOverlay.Text), Double.Parse(TopRightTBOverlay.Text),
+                Double.Parse(BottomLeftTBOverlay.Text), Double.Parse(BottomRightTBOverlay.Text));
+
+            if (ExampleOverlayRoundness != null)
+                ExampleOverlayRoundness.CornerRadius = new CornerRadius(Double.Parse(TopLeftTBOverlay.Text), Double.Parse(TopRightTBOverlay.Text),
+                Double.Parse(BottomLeftTBOverlay.Text), Double.Parse(BottomRightTBOverlay.Text));
         }
 
         private void TextBoxOverlay_KeyDown(object sender, Windows.UI.Xaml.Input.KeyRoutedEventArgs e)
@@ -212,7 +228,32 @@ namespace FluentEditor.ControlPalette
         private void RoundedTextChanged_TextChanged(object sender, TextChangedEventArgs e)
         {
             ExampleRoundness.CornerRadius = new CornerRadius(Double.Parse(TopLeftTB.Text), Double.Parse(TopRightTB.Text),
-                Double.Parse(BottomRightTB.Text), Double.Parse(BottomLeftTB.Text));
+                Double.Parse(BottomLeftTB.Text), Double.Parse(BottomRightTB.Text));
+        }
+
+        private void CornerOverlay_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (ExampleOverlayRoundness != null)
+                ExampleOverlayRoundness.CornerRadius = new CornerRadius(Double.Parse(TopLeftTBOverlay.Text), Double.Parse(TopRightTBOverlay.Text),
+                Double.Parse(BottomLeftTBOverlay.Text), Double.Parse(BottomRightTBOverlay.Text));
+        }
+
+        private void ControlBorderThicknessSlider_ValueChanged(object sender, Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs e)
+        {
+            if (LeftBorderTB == null)
+                return;
+
+            UpdateBorderThickness(new Thickness(Double.Parse(LeftBorderTB.Text), Double.Parse(TopBorderTB.Text),
+               Double.Parse(RightBorderTB.Text), Double.Parse(BottomBorderTB.Text)));
+        }
+
+        private void BorderThickness_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (LeftBorderTB == null)
+                return;
+
+            UpdateBorderThickness(new Thickness(Double.Parse(LeftBorderTB.Text), Double.Parse(TopBorderTB.Text),
+               Double.Parse(RightBorderTB.Text), Double.Parse(BottomBorderTB.Text)));
         }
     }
 }

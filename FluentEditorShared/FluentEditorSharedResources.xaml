@@ -14,13 +14,19 @@
             <SolidColorBrush x:Key="PaletteEditorDividerBrush" Color="#FF424242" />
             <SolidColorBrush x:Key="PaletteEntryEditorBorderBrush" Color="Transparent" />
             <Thickness x:Key="PaletteEntryEditorBorderThickness">0 0 0 0</Thickness>
-
+            <Color x:Key="SystemChromeAltHighColor">#FF1C1C1C</Color>
+            <Color x:Key="SystemChromeMediumColor">#FF1C1C1C</Color>
+            
+            
             <AcrylicBrush x:Key="SystemControlAcrylicWindowBrush" BackgroundSource="HostBackdrop" TintColor="{ThemeResource SystemChromeAltHighColor_Dark}" TintOpacity="0.8" FallbackColor="{ThemeResource SystemChromeMediumColor_Dark}" />
         </ResourceDictionary>
         <ResourceDictionary x:Key="Light">
             <SolidColorBrush x:Key="PaletteEditorDividerBrush" Color="#FF424242" />
             <SolidColorBrush x:Key="PaletteEntryEditorBorderBrush" Color="Transparent" />
             <Thickness x:Key="PaletteEntryEditorBorderThickness">0 0 0 0</Thickness>
+
+            <Color x:Key="SystemChromeAltHighColor">#FFFFFFFF</Color>
+            <Color x:Key="SystemChromeMediumColor">#FFFFFFFF</Color>
 
             <AcrylicBrush x:Key="SystemControlAcrylicWindowBrush" BackgroundSource="HostBackdrop" TintColor="{ThemeResource SystemChromeAltHighColor}" TintOpacity="0.8" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
         </ResourceDictionary>
@@ -35,8 +41,7 @@
     <local:NullableColorToStringConverter x:Key="NullableColorToStringConverter" />
 
     <Color x:Key="SystemAccentColor">#ff0073CF</Color>
-    <Color x:Key="SystemChromeAltHighColor">#FF32a852</Color>
-    <Color x:Key="SystemChromeMediumColor">#FF32a852</Color>
+    
 
     <Color x:Key="SystemChromeAltHighColor_Dark">#FF2B2B2B</Color>
     <Color x:Key="SystemChromeMediumColor_Dark">#FF2B2B2B</Color>

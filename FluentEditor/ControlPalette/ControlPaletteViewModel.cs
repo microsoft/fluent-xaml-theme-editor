@@ -37,6 +37,10 @@ namespace FluentEditor.ControlPalette
             _paletteModel = paletteModel;
             _exportProvider = exportProvider;
 
+            _controlBorderThickness = new Thickness(1);
+            _controlCornerRadius = new CornerRadius(2);
+            _overlayCornerRadius = new CornerRadius(4);
+
             _lightRegionBrush = new SolidColorBrush(_paletteModel.LightRegion.ActiveColor);
             _darkRegionBrush = new SolidColorBrush(_paletteModel.DarkRegion.ActiveColor);
 
@@ -208,6 +212,27 @@ namespace FluentEditor.ControlPalette
             get { return _lightRegionBrush; }
         }
 
+        private CornerRadius _controlCornerRadius;
+        public CornerRadius ControlCornerRadiusValue
+        {
+            set { _controlCornerRadius = value; }
+            get { return _controlCornerRadius; }
+        }
+
+        private CornerRadius _overlayCornerRadius;
+        public CornerRadius OverlayCornerRadiusValue
+        {
+            set { _overlayCornerRadius = value; }
+            get { return _overlayCornerRadius; }
+        }
+
+        private Thickness _controlBorderThickness;
+        public Thickness ControlBorderThicknessValue
+        {
+            set { _controlBorderThickness = value; }
+            get { return _controlBorderThickness; }
+        }
+
         public ColorPaletteEntry DarkRegion
         {
             get { return _paletteModel.DarkRegion; }
@@ -256,7 +281,7 @@ namespace FluentEditor.ControlPalette
 
         public void OnExportRequested(object sender, RoutedEventArgs e)
         {
-            _exportProvider.ShowExportView(_exportProvider.GenerateExportData(_paletteModel));
+            _exportProvider.ShowExportView(_exportProvider.GenerateExportData(_paletteModel, this));
         }
 
         #region INotifyPropertyChanged

@@ -146,7 +146,8 @@
                         x:Uid="ControlPaletteInspectorHeader"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
-                        FontWeight="SemiBold">
+                        FontWeight="SemiBold"
+                        Foreground="{ThemeResource SystemControlForegroundChromeGrayBrush}">
                         <HyperlinkButton.ContentTemplate>
                             <DataTemplate>
                                 <FontIcon Glyph="&#xE790;" FontSize="25"/>
@@ -318,10 +319,8 @@
                                     VerticalAlignment="Stretch" 
                                     Background="{ThemeResource ButtonBackgroundThemeBrush}"
                                     Margin="2"
-                                    Padding="2"
-                                      BorderBrush="{ThemeResource TextBoxButtonForegroundThemeBrush}"
-                                      BorderThickness="1"/>
-                                <TextBlock Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Control" Foreground="Black"/>
+                                    Padding="2"/>
+                                <TextBlock Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Control Preview" Foreground="Black"/>
                             </Grid>
 
                             <TextBlock
@@ -333,40 +332,98 @@
                             <Slider x:Name="ControlRoundSliderOverlay" 
                                     ValueChanged="ControlRoundSliderOverlay_ValueChanged" 
                                     Maximum="20" Minimum="0" Value="4" HorizontalAlignment="Stretch"/>
-                            <StackPanel Orientation="Horizontal" Spacing="9">
-                                <StackPanel>
+                            <Grid Height="150" x:Name="OverlayRadiusGrid">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Column="0" Grid.Row="0">
                                     <TextBox CornerRadius="2" BorderThickness="1"
                                              x:Name="TopLeftTBOverlay"
                                              Text="{Binding Value, ElementName=ControlRoundSliderOverlay, Mode=OneWay}" 
                                              MaxLength="2" 
                                              Width="54"
-                                             GotFocus="TextBox_GotFocus"/>
-                                </StackPanel>
-                                <StackPanel>
+                                             GotFocus="TextBox_GotFocus"
+                                             KeyDown="TextBoxOverlay_KeyDown"
+                                             TextChanged="CornerOverlay_TextChanged"/>
+                                </Grid>
+                                <Grid Grid.Column="2" Grid.Row="0">
                                     <TextBox CornerRadius="2" BorderThickness="1"
                                              x:Name="TopRightTBOverlay"
                                              Text="{Binding Value, ElementName=ControlRoundSliderOverlay, Mode=OneWay}" 
                                              MaxLength="2" 
                                              Width="54"
-                                             GotFocus="TextBox_GotFocus"/>
-                                </StackPanel>
-                                <StackPanel>
+                                             GotFocus="TextBox_GotFocus"
+                                             KeyDown="TextBoxOverlay_KeyDown"
+                                             TextChanged="CornerOverlay_TextChanged"/>
+                                </Grid>
+                                <Grid Grid.Column="0" Grid.Row="2">
                                     <TextBox CornerRadius="2" BorderThickness="1"
                                              x:Name="BottomRightTBOverlay"
                                              Text="{Binding Value, ElementName=ControlRoundSliderOverlay, Mode=OneWay}" 
                                              MaxLength="2" 
                                              Width="54"
-                                             GotFocus="TextBox_GotFocus"/>
-                                </StackPanel>
-                                <StackPanel>
+                                             GotFocus="TextBox_GotFocus"
+                                             KeyDown="TextBoxOverlay_KeyDown"
+                                             TextChanged="CornerOverlay_TextChanged"/>
+                                </Grid>
+                                <Grid Grid.Column="2" Grid.Row="2">
                                     <TextBox CornerRadius="2" BorderThickness="1"
                                              x:Name="BottomLeftTBOverlay"
                                              Text="{Binding Value, ElementName=ControlRoundSliderOverlay, Mode=OneWay}" 
                                              MaxLength="2" 
                                              Width="54"
-                                             GotFocus="TextBox_GotFocus"/>
-                                </StackPanel>
-                            </StackPanel>
+                                             GotFocus="TextBox_GotFocus"
+                                             KeyDown="TextBoxOverlay_KeyDown"
+                                             TextChanged="CornerOverlay_TextChanged"/>
+                                </Grid>
+
+                                <shared:Shadow
+                                    Grid.Column="1"
+                                    Grid.Row="1"
+                                    HorizontalAlignment="Stretch"
+                                    VerticalAlignment="Stretch"
+                                    Margin="0, 2, 0, 0"
+                                    Elevation="32" />
+                                
+                                <Grid x:Name="ExampleOverlayRoundness"
+                                    Grid.Column="1"
+                                    Grid.Row="1"
+                                    HorizontalAlignment="Stretch" 
+                                    VerticalAlignment="Stretch" 
+                                    Background="{ThemeResource FlyoutBackgroundThemeBrush}"
+                                    Margin="2"
+                                    Padding="2"
+                                    BorderBrush="{ThemeResource ComboBoxDropDownBorderBrush}"
+                                    BorderThickness="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Overlay Preview" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                                    <Grid Grid.Column="0" Grid.Row="1" Background="{ThemeResource SystemControlBackgroundAccentBrush}" 
+                                          HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RequestedTheme="Dark" Margin="3"
+                                          CornerRadius="{ThemeResource ControlCornerRadius}">
+                                        <TextBlock Text="OK" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                                    </Grid>
+                                    <Grid Grid.Column="1" Grid.Row="1" Background="{ThemeResource ButtonBackgroundThemeBrush}"
+                                          HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="3"
+                                          CornerRadius="{ThemeResource ControlCornerRadius}">
+                                        <TextBlock Text="Cancel" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                                    </Grid>
+                                </Grid>
+                                
+                            </Grid>
                         </StackPanel>
                         <!-- END -->
 
@@ -384,49 +441,67 @@
                                      CornerRadius="2"
                                      Padding="5">
                             <Slider x:Name="ControlBorderThicknessSlider" 
-                                    Maximum="5" Minimum="0" Value="1" HorizontalAlignment="Stretch"/>
-                            <StackPanel Orientation="Horizontal" Spacing="9">
-                                <StackPanel>
-                                    <FontIcon Glyph="&#xF5A5;" FontSize="28"/>
+                                    Maximum="5" Minimum="0" Value="1" HorizontalAlignment="Stretch" ValueChanged="ControlBorderThicknessSlider_ValueChanged"/>
+                            <Grid Height="130" x:Name="BorderGrid">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Column="0" Grid.Row="1" VerticalAlignment="Center">
                                     <TextBox CornerRadius="2" BorderThickness="1"
                                              x:Name="LeftBorderTB"
                                              Text="{Binding Value, ElementName=ControlBorderThicknessSlider, Mode=OneWay}" 
                                              MaxLength="2" 
-                                             Width="54" 
+                                             Width="54"
+                                             Height="34"                                             
                                              GotFocus="TextBox_GotFocus"
-                                             KeyDown="TextBoxBorder_KeyDown"/>
-                                </StackPanel>
-                                <StackPanel>
-                                    <FontIcon Glyph="&#xF5A7;" FontSize="28"/>
+                                             KeyDown="TextBoxBorder_KeyDown"
+                                             TextChanged="BorderThickness_TextChanged"/>
+                                </Grid>
+                                <Grid Grid.Column="1" Grid.Row="0" Margin="5">
                                     <TextBox CornerRadius="2" BorderThickness="1"
                                              x:Name="TopBorderTB"
                                              Text="{Binding Value, ElementName=ControlBorderThicknessSlider, Mode=OneWay}" 
                                              MaxLength="2" 
                                              Width="54"
                                              GotFocus="TextBox_GotFocus"
-                                             KeyDown="TextBoxBorder_KeyDown"/>
-                                </StackPanel>
-                                <StackPanel>
-                                    <FontIcon Glyph="&#xF5A6;" FontSize="28"/>
+                                             KeyDown="TextBoxBorder_KeyDown"
+                                             TextChanged="BorderThickness_TextChanged"/>
+                                </Grid>
+                                <Grid Grid.Column="2" Grid.Row="1" VerticalAlignment="Center">
                                     <TextBox CornerRadius="2" BorderThickness="1"
                                              x:Name="RightBorderTB"
                                              Text="{Binding Value, ElementName=ControlBorderThicknessSlider, Mode=OneWay}" 
                                              MaxLength="2" 
                                              Width="54" 
+                                             Height="34"
                                              GotFocus="TextBox_GotFocus"
-                                             KeyDown="TextBoxBorder_KeyDown"/>
-                                </StackPanel>
-                                <StackPanel>
-                                    <FontIcon Glyph="&#xF5A8;" FontSize="28"/>
+                                             KeyDown="TextBoxBorder_KeyDown"
+                                             TextChanged="BorderThickness_TextChanged"/>
+                                </Grid>
+                                <Grid Grid.Column="1" Grid.Row="2" Margin="5">
                                     <TextBox CornerRadius="2" BorderThickness="1"
                                              x:Name="BottomBorderTB"
                                              Text="{Binding Value, ElementName=ControlBorderThicknessSlider, Mode=OneWay}" 
                                              MaxLength="2" 
-                                             Width="54" 
+                                             Width="54"
                                              GotFocus="TextBox_GotFocus"
-                                             KeyDown="TextBoxBorder_KeyDown"/>
-                                </StackPanel>
-                            </StackPanel>
+                                             KeyDown="TextBoxBorder_KeyDown"
+                                             TextChanged="BorderThickness_TextChanged"/>
+                                </Grid>
+
+                                <Grid Grid.Column="1" Grid.Row="1" x:Name="BorderPreview" 
+                                      BorderBrush="{ThemeResource ComboBoxBorderThemeBrush}"
+                                      BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                    <TextBlock Text="Border Preview" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5" Margin="3"/>
+                                </Grid>
+                            </Grid>
                         </StackPanel>
                         <Button Content="Apply" HorizontalAlignment="Stretch" Margin="0, 25, 0, 0" Click="Button_Click"/>
 
