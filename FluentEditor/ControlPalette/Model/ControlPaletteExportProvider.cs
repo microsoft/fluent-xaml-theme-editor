@@ -74,9 +74,9 @@ namespace FluentEditor.ControlPalette.Model
             sb.AppendLine("                    <AcrylicBrush x:Key=\"SystemControlAcrylicWindowBrush\" BackgroundSource=\"HostBackdrop\" TintColor=\"{ThemeResource SystemChromeAltHighColor}\" TintOpacity=\"0.8\" FallbackColor=\"{ThemeResource SystemChromeMediumColor}\" />");
 
             sb.AppendLine("                    <!-- Override system shape defaults -->");
-            sb.AppendLine(string.Format("                    <CornerRadius x:Key=\"ControlCornerRadius\">{0},{1},{2},{3}</Color>", viewModel.ControlCornerRadiusValue.TopLeft, 
+            sb.AppendLine(string.Format("                    <CornerRadius x:Key=\"ControlCornerRadius\">{0},{1},{2},{3}</CornerRadius>", viewModel.ControlCornerRadiusValue.TopLeft, 
                 viewModel.ControlCornerRadiusValue.TopRight, viewModel.ControlCornerRadiusValue.BottomLeft, viewModel.ControlCornerRadiusValue.BottomRight));
-            sb.AppendLine(string.Format("                    <CornerRadius x:Key=\"OverlayCornerRadius\">{0},{1},{2},{3}</Color>", viewModel.OverlayCornerRadiusValue.TopLeft,
+            sb.AppendLine(string.Format("                    <CornerRadius x:Key=\"OverlayCornerRadius\">{0},{1},{2},{3}</CornerRadius>", viewModel.OverlayCornerRadiusValue.TopLeft,
                 viewModel.OverlayCornerRadiusValue.TopRight, viewModel.OverlayCornerRadiusValue.BottomLeft, viewModel.OverlayCornerRadiusValue.BottomRight));
 
             sb.AppendLine("                    <!-- Override system generated accent colors -->");
@@ -177,6 +177,12 @@ namespace FluentEditor.ControlPalette.Model
             sb.AppendLine(string.Format("                    <Color x:Key=\"SystemRevealListLowColor\">{0}</Color>", model.LightBase.Palette[1].ActiveColor.ToString()));
             sb.AppendLine(string.Format("                    <Color x:Key=\"SystemRevealListMediumColor\">{0}</Color>", model.LightBase.Palette[5].ActiveColor.ToString()));
             sb.AppendLine("                    <AcrylicBrush x:Key=\"SystemControlAcrylicWindowBrush\" BackgroundSource=\"HostBackdrop\" TintColor=\"{ThemeResource SystemChromeAltHighColor}\" TintOpacity=\"0.8\" FallbackColor=\"{ThemeResource SystemChromeMediumColor}\" />");
+
+            sb.AppendLine("                    <!-- Override system shape defaults -->");
+            sb.AppendLine(string.Format("                    <CornerRadius x:Key=\"ControlCornerRadius\">{0},{1},{2},{3}</CornerRadius>", viewModel.ControlCornerRadiusValue.TopLeft,
+                viewModel.ControlCornerRadiusValue.TopRight, viewModel.ControlCornerRadiusValue.BottomLeft, viewModel.ControlCornerRadiusValue.BottomRight));
+            sb.AppendLine(string.Format("                    <CornerRadius x:Key=\"OverlayCornerRadius\">{0},{1},{2},{3}</CornerRadius>", viewModel.OverlayCornerRadiusValue.TopLeft,
+                viewModel.OverlayCornerRadiusValue.TopRight, viewModel.OverlayCornerRadiusValue.BottomLeft, viewModel.OverlayCornerRadiusValue.BottomRight));
 
             sb.AppendLine("                    <!-- Override system generated accent colors -->");
             sb.AppendLine(string.Format("                    <Color x:Key=\"SystemAccentColorLight1\">{0}</Color>", model.LightPrimary.Palette[4].ActiveColor.ToString()));

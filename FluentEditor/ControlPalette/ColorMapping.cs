@@ -15,7 +15,6 @@ namespace FluentEditor.ControlPalette
 
     public class ColorMapping
     {
-        private bool initialized = false;
         public static ColorMapping Parse(JsonObject data, IColorPaletteEntry lightRegion, IColorPaletteEntry darkRegion, ColorPalette lightBase, ColorPalette darkBase, ColorPalette lightPrimary, ColorPalette darkPrimary, IColorPaletteEntry white, IColorPaletteEntry black)
         {
             var target = data["Target"].GetEnum<ColorTarget>();
@@ -217,14 +216,14 @@ namespace FluentEditor.ControlPalette
 
             if (IsSettingDarkColors(_source.Title, "Light Base"))
             {
-                App.Current.Resources["SystemChromeAltHighColor"] = _targetResources.BaseLow;
-                App.Current.Resources["SystemChromeMediumColor"] = _targetResources.BaseLow;
+                App.Current.Resources["SystemChromeAltHighColor"] = _targetResources.ChromeMedium;
+                App.Current.Resources["SystemChromeMediumColor"] = _targetResources.ChromeMedium;
             }
 
             if (IsSettingDarkColors(_source.Title, "Dark Base"))
             {
-                App.Current.Resources["SystemChromeAltHighColor_Dark"] = _targetResources.BaseLow;
-                App.Current.Resources["SystemChromeMediumColor_Dark"] = _targetResources.BaseLow;
+                App.Current.Resources["SystemChromeAltHighColor_Dark"] = _targetResources.ChromeMedium;
+                App.Current.Resources["SystemChromeMediumColor_Dark"] = _targetResources.ChromeMedium;
             }
         }
 
