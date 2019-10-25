@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="c9d8c1c5-2ee3-413a-b446-636587e0eaa2" Publisher="CN=mattowen" Version="1.5.7.0" />
+  <Identity Name="c9d8c1c5-2ee3-413a-b446-636587e0eaa2" Publisher="CN=mattowen" Version="1.5.8.0" />
   <mp:PhoneIdentity PhoneProductId="c9d8c1c5-2ee3-413a-b446-636587e0eaa2" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>FluentThemeEditor</DisplayName>

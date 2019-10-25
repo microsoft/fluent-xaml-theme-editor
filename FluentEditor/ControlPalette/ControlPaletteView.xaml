@@ -15,6 +15,7 @@
 
     <Page.Resources>
         <x:Double x:Key="TextControlThemeMinWidth">54</x:Double>
+        <SolidColorBrush x:Key="OverlayPreviewBorderBrush" Color="{ThemeResource SystemControlForegroundBaseMediumLowBrush}" Opacity="0.8"/>
     </Page.Resources>
     
     <Grid XYFocusKeyboardNavigation="Enabled">
@@ -317,10 +318,10 @@
                                     Grid.Row="1" 
                                     HorizontalAlignment="Stretch" 
                                     VerticalAlignment="Stretch" 
-                                    Background="{ThemeResource ButtonBackgroundThemeBrush}"
+                                    Background="{ThemeResource ButtonBackground}"
                                     Margin="2"
                                     Padding="2"/>
-                                <TextBlock Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Control Preview" Foreground="Black"/>
+                                <TextBlock Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Control Preview"/>
                             </Grid>
 
                             <TextBlock
@@ -397,10 +398,10 @@
                                     Grid.Row="1"
                                     HorizontalAlignment="Stretch" 
                                     VerticalAlignment="Stretch" 
-                                    Background="{ThemeResource FlyoutBackgroundThemeBrush}"
+                                    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
                                     Margin="2"
                                     Padding="2"
-                                    BorderBrush="{ThemeResource ComboBoxDropDownBorderBrush}"
+                                    BorderBrush="{ThemeResource OverlayPreviewBorderBrush}"
                                     BorderThickness="1">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="*"/>
@@ -416,7 +417,7 @@
                                           CornerRadius="{ThemeResource ControlCornerRadius}">
                                         <TextBlock Text="OK" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{ThemeResource CaptionTextBlockStyle}"/>
                                     </Grid>
-                                    <Grid Grid.Column="1" Grid.Row="1" Background="{ThemeResource ButtonBackgroundThemeBrush}"
+                                    <Grid Grid.Column="1" Grid.Row="1" Background="{ThemeResource ButtonBackground}"
                                           HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="3"
                                           CornerRadius="{ThemeResource ControlCornerRadius}">
                                         <TextBlock Text="Cancel" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{ThemeResource CaptionTextBlockStyle}"/>
@@ -584,7 +585,7 @@
                                 Padding="5, 0, 0, 0"
                                 VerticalAlignment="Top"
                                 BorderThickness="1"
-                                BorderBrush="{ThemeResource ButtonBackgroundThemeBrush}"
+                                BorderBrush="{ThemeResource ButtonBackground}"
                                 CornerRadius="2">
                                 <color:ColorPaletteEntryEditor
                                 AutomationProperties.Name="{x:Bind Path=ViewModel.LightRegion.Title, Mode=OneWay}"
@@ -600,7 +601,7 @@
                                 Padding="5, 0, 0, 0"
                                 VerticalAlignment="Top"
                                 BorderThickness="1"
-                                BorderBrush="{ThemeResource ButtonBackgroundThemeBrush}"
+                                BorderBrush="{ThemeResource ButtonBackground}"
                                 CornerRadius="2">
                             <color:ColorPaletteEntryEditor                            
                                 AutomationProperties.Name="{x:Bind Path=ViewModel.DarkRegion.Title, Mode=OneWay}"
@@ -665,7 +666,7 @@
                                 Padding="5, 0, 0, 0"
                                 VerticalAlignment="Top"
                                 BorderThickness="1"
-                                BorderBrush="{ThemeResource ButtonBackgroundThemeBrush}"
+                                BorderBrush="{ThemeResource ButtonBackground}"
                                 CornerRadius="2">
                             <color:ColorPaletteEditor                            
                                 ColorPalette="{x:Bind Path=ViewModel.LightBase, Mode=OneWay}"
@@ -679,7 +680,7 @@
                                 Padding="5, 0, 0, 0"
                                 VerticalAlignment="Top"
                                 BorderThickness="1"
-                                BorderBrush="{ThemeResource ButtonBackgroundThemeBrush}"
+                                BorderBrush="{ThemeResource ButtonBackground}"
                                 CornerRadius="2">
                             <color:ColorPaletteEditor                            
                                 ColorPalette="{x:Bind Path=ViewModel.DarkBase, Mode=OneWay}"
@@ -743,7 +744,7 @@
                                 Padding="5, 0, 0, 0"
                                 VerticalAlignment="Top"
                                 BorderThickness="1"
-                                BorderBrush="{ThemeResource ButtonBackgroundThemeBrush}"
+                                BorderBrush="{ThemeResource ButtonBackground}"
                                 CornerRadius="2">
                             <color:ColorPaletteEditor
                                 ColorPalette="{x:Bind Path=ViewModel.LightPrimary, Mode=OneWay}"
@@ -757,7 +758,7 @@
                                 Padding="5, 0, 0, 0"
                                 VerticalAlignment="Top"
                                 BorderThickness="1"
-                                BorderBrush="{ThemeResource ButtonBackgroundThemeBrush}"
+                                BorderBrush="{ThemeResource ButtonBackground}"
                                 CornerRadius="2">
                             <color:ColorPaletteEditor                            
                                 ColorPalette="{x:Bind Path=ViewModel.DarkPrimary, Mode=OneWay}"
