@@ -14,9 +14,13 @@
             <SolidColorBrush x:Key="PaletteEditorDividerBrush" Color="#FF424242" />
             <SolidColorBrush x:Key="PaletteEntryEditorBorderBrush" Color="Transparent" />
             <Thickness x:Key="PaletteEntryEditorBorderThickness">0 0 0 0</Thickness>
+            <Thickness x:Key="ControlPreviewBorderThickness">0</Thickness>
+            
             <Color x:Key="SystemChromeAltHighColor">#FF1C1C1C</Color>
             <Color x:Key="SystemChromeMediumColor">#FF1C1C1C</Color>
 
+            <SolidColorBrush x:Key="OverlayBackgroundBrush" Color="#25FFFFFF"/>           
+            
             <!--<AcrylicBrush x:Key="SystemControlTransientBackgroundBrush" BackgroundSource="HostBackdrop" TintColor="{ThemeResource SystemChromeAltHighColor_Dark}" TintOpacity="0.8" FallbackColor="{ThemeResource SystemChromeMediumColor_Dark}" />-->
             <AcrylicBrush x:Key="TimePickerFlyoutPresenterBackground" BackgroundSource="Backdrop" TintColor="{ThemeResource SystemChromeAltHighColor_Dark}" TintOpacity="0.8" FallbackColor="{ThemeResource SystemChromeMediumColor_Dark}" />
             <AcrylicBrush x:Key="DatePickerFlyoutPresenterBackground" BackgroundSource="Backdrop" TintColor="{ThemeResource SystemChromeAltHighColor_Dark}" TintOpacity="0.8" FallbackColor="{ThemeResource SystemChromeMediumColor_Dark}" />
@@ -27,6 +31,9 @@
             <SolidColorBrush x:Key="PaletteEditorDividerBrush" Color="#FF424242" />
             <SolidColorBrush x:Key="PaletteEntryEditorBorderBrush" Color="Transparent" />
             <Thickness x:Key="PaletteEntryEditorBorderThickness">0 0 0 0</Thickness>
+            <Thickness x:Key="ControlPreviewBorderThickness">0</Thickness>
+
+            <SolidColorBrush x:Key="OverlayBackgroundBrush" Color="White" />
 
             <Color x:Key="SystemChromeAltHighColor">#FFFFFFFF</Color>
             <Color x:Key="SystemChromeMediumColor">#FFFFFFFF</Color>
@@ -37,6 +44,9 @@
             <AcrylicBrush x:Key="SystemControlAcrylicWindowBrush" BackgroundSource="HostBackdrop" TintColor="{ThemeResource SystemChromeAltHighColor}" TintOpacity="0.8" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
         </ResourceDictionary>
         <ResourceDictionary x:Key="HighContrast">
+            <SolidColorBrush x:Key="OverlayBackgroundBrush" Color="Transparent" />
+            <Thickness x:Key="ControlPreviewBorderThickness">1, 1, 1, 1 </Thickness>
+            <StaticResource x:Key="OverlayPreviewBorderBrush" ResourceKey="{ThemeResource ButtonBorderThemeBrush}"/>
             <SolidColorBrush x:Key="PaletteEditorDividerBrush" Color="#FF000000" />
             <SolidColorBrush x:Key="PaletteEntryEditorBorderBrush" Color="{ThemeResource SystemColorButtonTextColor}" />
             <Thickness x:Key="PaletteEntryEditorBorderThickness">1 1 1 1</Thickness>
