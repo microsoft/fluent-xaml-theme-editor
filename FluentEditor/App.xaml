@@ -8,19 +8,19 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Application.Resources>
+
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
                 <ResourceDictionary Source="ms-appx:///FluentEditorShared/FluentEditorSharedResources.xaml" />
-                <ResourceDictionary>
-
+            </ResourceDictionary.MergedDictionaries>
                     <ResourceDictionary.ThemeDictionaries>
                         <ResourceDictionary x:Key="Default">
                             <SolidColorBrush x:Key="AppBackgroundBrush" Color="#FF232323" />
                             <SolidColorBrush x:Key="AppContentBackgroundBrush" Color="#FF282828" />
                             <SolidColorBrush x:Key="ContentSpacerBrush" Color="#FF1F1F1F" />
 
-                            <SolidColorBrush x:Key="ExpanderButtonStyleNormalForegroundBrush" Color="{StaticResource SystemBaseHighColor}" />
+                    <SolidColorBrush x:Key="ExpanderButtonStyleNormalForegroundBrush" Color="{StaticResource SystemBaseHighColor}" />
                             <SolidColorBrush x:Key="ExpanderButtonStylePointerOverForegroundBrush" Color="{StaticResource SystemBaseHighColor}" />
                             <SolidColorBrush x:Key="ExpanderButtonStylePressedForegroundBrush" Color="{StaticResource SystemBaseHighColor}" />
                             <SolidColorBrush x:Key="ExpanderButtonStyleDisabledForegroundBrush" Color="{StaticResource SystemBaseHighColor}" />
@@ -70,9 +70,6 @@
                             <SolidColorBrush x:Key="ExpanderButtonStyleIndeterminateDisabledForegroundBrush" Color="{ThemeResource SystemColorButtonTextColor}" />
                         </ResourceDictionary>
                     </ResourceDictionary.ThemeDictionaries>
-
-                </ResourceDictionary>
-            </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 
     </Application.Resources>

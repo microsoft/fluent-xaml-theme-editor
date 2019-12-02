@@ -205,6 +205,37 @@ namespace FluentEditor.ControlPalette
             ForceThemeUpdateInLinkedElement();
         }
 
+        private void UpdateAcrylicSurfaceVisual()
+        {
+            if (_targetResources == null || _targetResources.BaseLow == null || _targetResources.ChromeMediumLow == null)
+            {
+                return;
+            }
+
+            App.Current.Resources["SystemAccentColor"] = _targetResources.Accent;
+
+            if (IsSettingDarkColors(_source.Title, "Light Base"))
+            {
+                App.Current.Resources["SystemChromeAltHighColor"] = _targetResources.ChromeLow;
+                App.Current.Resources["SystemChromeMediumColor"] = _targetResources.ChromeMedium;
+            }
+
+            if (IsSettingDarkColors(_source.Title, "Dark Base"))
+            {
+                App.Current.Resources["SystemChromeAltHighColor_Dark"] = _targetResources.ChromeMedium;
+                App.Current.Resources["SystemChromeMediumColor_Dark"] = _targetResources.ChromeMedium;
+            }
+        }
+
+        private bool IsSettingDarkColors(string title, string themeType)
+        {
+            string[] splitTitle = title.Split(new string[] { themeType }, StringSplitOptions.None);
+
+            if (splitTitle[0] == "")
+                return true;
+            return false;
+        }
+
         public void Dispose()
         {
             _source.ActiveColorChanged -= Source_ActiveColorChanged;
@@ -231,7 +262,7 @@ namespace FluentEditor.ControlPalette
                     _targetResources.AltLow = _source.ActiveColor;
                     break;
                 case ColorTarget.AltMedium:
-                    _targetResources.AltMedium = _source.ActiveColor;
+                    _targetResources.AltMedium = _source.ActiveColor;                    
                     break;
                 case ColorTarget.AltMediumHigh:
                     _targetResources.AltMediumHigh = _source.ActiveColor;
@@ -300,6 +331,8 @@ namespace FluentEditor.ControlPalette
                     _targetResources.ListMedium = _source.ActiveColor;
                     break;
             }
+
+            UpdateAcrylicSurfaceVisual();
         }
     }
 }

@@ -9,9 +9,12 @@ namespace FluentEditorShared.ColorPalette
 {
     public class ColorPaletteEditor : Control
     {
+        private double collapsedHeight = 56;
+        private double expandedHeight = 465;
         public ColorPaletteEditor()
         {
             this.DefaultStyleKey = typeof(ColorPaletteEditor);
+            this.Height = collapsedHeight;
         }
 
         #region ColorPaletteProperty
@@ -63,8 +66,23 @@ namespace FluentEditorShared.ColorPalette
 
         public bool IsExpanded
         {
-            get { return (bool)GetValue(IsExpandedProperty); }
-            set { SetValue(IsExpandedProperty, value); }
+            get
+            {
+                return (bool)GetValue(IsExpandedProperty);
+            }
+            set
+            {
+                AdjustHeight(value);
+                SetValue(IsExpandedProperty, value);
+            }
+        }
+
+        private void AdjustHeight(bool isExpanded)
+        {
+            if (isExpanded)
+                this.Height = expandedHeight;
+            else
+                this.Height = collapsedHeight;
         }
 
         #endregion

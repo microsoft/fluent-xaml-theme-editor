@@ -123,8 +123,26 @@
   <data name="AppDisplayName" xml:space="preserve">
     <value>Fluent XAML Theme Editor</value>
   </data>
+  <data name="ApplyButtonText.Content" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="CancelButtonPreviewText.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
   <data name="ColorFlyoutMappingDescription" xml:space="preserve">
     <value>Maps to {0}</value>
+  </data>
+  <data name="ComboboxShapePresetsHeader.Header" xml:space="preserve">
+    <value>Shape Presets</value>
+  </data>
+  <data name="ControlBorderThicknessPreview.Text" xml:space="preserve">
+    <value>Border Preview</value>
+  </data>
+  <data name="ControlBorderThicknessSectionHeader.Text" xml:space="preserve">
+    <value>Border Thickness</value>
+  </data>
+  <data name="ControlCornerRadiusPreview.Text" xml:space="preserve">
+    <value>Control Preview</value>
   </data>
   <data name="ControlPaletteBaseBlock.Text" xml:space="preserve">
     <value>Base</value>
@@ -144,8 +162,8 @@
   <data name="ControlPaletteExportButton.Content" xml:space="preserve">
     <value>Export</value>
   </data>
-  <data name="ControlPaletteInspectorHeader.Text" xml:space="preserve">
-    <value>Color dictionary</value>
+  <data name="ControlPaletteInspectorHeader.Content" xml:space="preserve">
+    <value>Color</value>
   </data>
   <data name="ControlPaletteLightTestContent.Title" xml:space="preserve">
     <value>Light theme</value>
@@ -163,7 +181,7 @@
     <value>Unable to load</value>
   </data>
   <data name="ControlPalettePresetCombo.Header" xml:space="preserve">
-    <value>Presets</value>
+    <value>Color Presets</value>
   </data>
   <data name="ControlPalettePresetCombo.PlaceholderText" xml:space="preserve">
     <value>Custom</value>
@@ -186,8 +204,17 @@
   <data name="ControlPaletteSaveErrorTitle" xml:space="preserve">
     <value>Unable to save</value>
   </data>
+  <data name="ControlsCornerRadiusSliderHeader.Text" xml:space="preserve">
+    <value>Controls</value>
+  </data>
+  <data name="CornerRadiusSectionHeader.Text" xml:space="preserve">
+    <value>Corner Radius</value>
+  </data>
   <data name="DarkThemeTextContrastTitle" xml:space="preserve">
     <value>White Text</value>
+  </data>
+  <data name="DefaultItemText.Text" xml:space="preserve">
+    <value>Default</value>
   </data>
   <data name="ExportCopyButton.Content" xml:space="preserve">
     <value>Copy to Clipboard</value>
@@ -203,6 +230,18 @@
   </data>
   <data name="MainDataPath" xml:space="preserve">
     <value>ms-appx:///Resources/en-us/demodata.json</value>
+  </data>
+  <data name="OKButtonPreviewText.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OverlayCornerRadiusHeader.Text" xml:space="preserve">
+    <value>Overlay</value>
+  </data>
+  <data name="OverlayCornerRadiusPreview.Text" xml:space="preserve">
+    <value>Overlay Preview</value>
+  </data>
+  <data name="PreFluent.Text" xml:space="preserve">
+    <value>No Rounding, Thicker Borders</value>
   </data>
   <data name="TestContentAppBarButton.Content" xml:space="preserve">
     <value>Yolo</value>

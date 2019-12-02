@@ -10,6 +10,7 @@ using Windows.Data.Json;
 using Windows.Storage;
 using Windows.UI;
 using System.Linq;
+using Windows.UI.Xaml.Media;
 
 namespace FluentEditor.ControlPalette.Model
 {
@@ -242,6 +243,7 @@ namespace FluentEditor.ControlPalette.Model
 
             _lightRegion.ActiveColor = preset.LightRegionColor;
             _darkRegion.ActiveColor = preset.DarkRegionColor;
+            
             _lightBase.BaseColor.ActiveColor = preset.LightBaseColor;
             _darkBase.BaseColor.ActiveColor = preset.DarkBaseColor;
             _lightPrimary.BaseColor.ActiveColor = preset.LightPrimaryColor;

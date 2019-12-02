@@ -14,7 +14,7 @@ namespace FluentEditor.ControlPalette.Model
     public interface IControlPaletteExportProvider
     {
         Task ShowExportView(string exportData);
-        string GenerateExportData(IControlPaletteModel model, bool showAllColors = false);
+        string GenerateExportData(IControlPaletteModel model, ControlPaletteViewModel viewModel, bool showAllColors = false);
     }
 
     public class ControlPaletteExportProvider : IControlPaletteExportProvider
@@ -27,7 +27,7 @@ namespace FluentEditor.ControlPalette.Model
         // This is owned by the UI thread for the _exportWindow
         private ExportViewModel _exportViewModel;
 
-        public string GenerateExportData(IControlPaletteModel model, bool showAllColors = false)
+        public string GenerateExportData(IControlPaletteModel model, ControlPaletteViewModel viewModel, bool showAllColors = false)
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("<!-- Free Public License 1.0.0 Permission to use, copy, modify, and/or distribute this code for any purpose with or without fee is hereby granted. -->");
@@ -68,9 +68,72 @@ namespace FluentEditor.ControlPalette.Model
             ChromeAltMediumHigh.A = 204;
 
             sb.AppendLine(string.Format("                    <Color x:Key=\"SystemChromeAltMediumHighColor\">{0}</Color>", ChromeAltMediumHigh.ToString()));
-            sb.AppendLine(string.Format("                    <Color x:Key=\"SystemChromeAltHighColor\">{0}</Color>", model.DarkRegion.ActiveColor.ToString()));
+            sb.AppendLine(string.Format("                    <Color x:Key=\"SystemChromeAltHighColor\">{0}</Color>", model.DarkBase.Palette[5].ActiveColor.ToString()));
             sb.AppendLine(string.Format("                    <Color x:Key=\"SystemRevealListLowColor\">{0}</Color>", model.DarkBase.Palette[8].ActiveColor.ToString()));
             sb.AppendLine(string.Format("                    <Color x:Key=\"SystemRevealListMediumColor\">{0}</Color>", model.DarkBase.Palette[5].ActiveColor.ToString()));
+            sb.AppendLine("                    <AcrylicBrush x:Key=\"SystemControlAcrylicWindowBrush\" BackgroundSource=\"HostBackdrop\" TintColor=\"{ThemeResource SystemChromeAltHighColor}\" TintOpacity=\"0.8\" FallbackColor=\"{ThemeResource SystemChromeMediumColor}\" />");
+
+            sb.AppendLine("                    <!-- Override system shape defaults -->");
+            sb.AppendLine(string.Format("                    <CornerRadius x:Key=\"ControlCornerRadius\">{0},{1},{2},{3}</CornerRadius>", viewModel.ControlCornerRadiusValue.TopLeft, 
+                viewModel.ControlCornerRadiusValue.TopRight, viewModel.ControlCornerRadiusValue.BottomLeft, viewModel.ControlCornerRadiusValue.BottomRight));
+            sb.AppendLine(string.Format("                    <CornerRadius x:Key=\"OverlayCornerRadius\">{0},{1},{2},{3}</CornerRadius>", viewModel.OverlayCornerRadiusValue.TopLeft,
+                viewModel.OverlayCornerRadiusValue.TopRight, viewModel.OverlayCornerRadiusValue.BottomLeft, viewModel.OverlayCornerRadiusValue.BottomRight));
+
+            sb.AppendLine("                    <!-- Override system borders -->");
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"MenuBarItemBorderThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"GridViewItemMultiselectBorderThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"CheckBoxBorderThemeThickness\">{0}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <x:Double x:Key=\"GridViewItemSelectedBorderThemeThickness\">{0}</x:Double>", Math.Max(Math.Max(Math.Max(viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top), viewModel.ControlBorderThicknessValue.Right), viewModel.ControlBorderThicknessValue.Bottom)));
+            sb.AppendLine(string.Format("                    <x:Double x:Key=\"RadioButtonBorderThemeThickness\">{0}</x:Double>", Math.Max(Math.Max(Math.Max(viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top), viewModel.ControlBorderThicknessValue.Right), viewModel.ControlBorderThicknessValue.Bottom)));
+
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"ButtonBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"CalendarDatePickerBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"TimePickerBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"DatePickerBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"ToggleSwitchOuterBorderStrokeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"RepeatButtonBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"SearchBoxBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"ToggleButtonBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"TextControlBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"ButtonRevealBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"RepeatButtonRevealBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"ToggleButtonRevealBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"AppBarEllipsisButtonRevealBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"AppBarButtonRevealBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"AppBarToggleButtonRevealBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"ListViewItemRevealBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"GridViewItemRevealBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"ComboBoxItemRevealBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+
+            sb.AppendLine(string.Format("                    <x:Double x:Key=\"PersonPictureEllipseBadgeStrokeThickness\">{0}</x:Double>", Math.Max(Math.Max(Math.Max(viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top), viewModel.ControlBorderThicknessValue.Right), viewModel.ControlBorderThicknessValue.Bottom)));
 
             sb.AppendLine("                    <!-- Override system generated accent colors -->");
             sb.AppendLine(string.Format("                    <Color x:Key=\"SystemAccentColorDark1\">{0}</Color>", model.DarkPrimary.Palette[4].ActiveColor.ToString()));
@@ -166,9 +229,72 @@ namespace FluentEditor.ControlPalette.Model
             ChromeAltMediumHigh.A = 204;
 
             sb.AppendLine(string.Format("                    <Color x:Key=\"SystemChromeAltMediumHighColor\">{0}</Color>", ChromeAltMediumHigh.ToString()));
-            sb.AppendLine(string.Format("                    <Color x:Key=\"SystemChromeAltHighColor\">{0}</Color>", model.LightRegion.ActiveColor.ToString()));
+            sb.AppendLine(string.Format("                    <Color x:Key=\"SystemChromeAltHighColor\">{0}</Color>", model.LightBase.Palette[5].ActiveColor.ToString()));
             sb.AppendLine(string.Format("                    <Color x:Key=\"SystemRevealListLowColor\">{0}</Color>", model.LightBase.Palette[1].ActiveColor.ToString()));
             sb.AppendLine(string.Format("                    <Color x:Key=\"SystemRevealListMediumColor\">{0}</Color>", model.LightBase.Palette[5].ActiveColor.ToString()));
+            sb.AppendLine("                    <AcrylicBrush x:Key=\"SystemControlAcrylicWindowBrush\" BackgroundSource=\"HostBackdrop\" TintColor=\"{ThemeResource SystemChromeAltHighColor}\" TintOpacity=\"0.8\" FallbackColor=\"{ThemeResource SystemChromeMediumColor}\" />");
+
+            sb.AppendLine("                    <!-- Override system shape defaults -->");
+            sb.AppendLine(string.Format("                    <CornerRadius x:Key=\"ControlCornerRadius\">{0},{1},{2},{3}</CornerRadius>", viewModel.ControlCornerRadiusValue.TopLeft,
+                viewModel.ControlCornerRadiusValue.TopRight, viewModel.ControlCornerRadiusValue.BottomLeft, viewModel.ControlCornerRadiusValue.BottomRight));
+            sb.AppendLine(string.Format("                    <CornerRadius x:Key=\"OverlayCornerRadius\">{0},{1},{2},{3}</CornerRadius>", viewModel.OverlayCornerRadiusValue.TopLeft,
+                viewModel.OverlayCornerRadiusValue.TopRight, viewModel.OverlayCornerRadiusValue.BottomLeft, viewModel.OverlayCornerRadiusValue.BottomRight));
+
+            sb.AppendLine("                    <!-- Override system borders -->");
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"MenuBarItemBorderThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"GridViewItemMultiselectBorderThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"CheckBoxBorderThemeThickness\">{0}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <x:Double x:Key=\"GridViewItemSelectedBorderThemeThickness\">{0}</x:Double>", Math.Max(Math.Max(Math.Max(viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top), viewModel.ControlBorderThicknessValue.Right), viewModel.ControlBorderThicknessValue.Bottom)));
+            sb.AppendLine(string.Format("                    <x:Double x:Key=\"RadioButtonBorderThemeThickness\">{0}</x:Double>", Math.Max(Math.Max(Math.Max(viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top), viewModel.ControlBorderThicknessValue.Right), viewModel.ControlBorderThicknessValue.Bottom)));
+
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"ButtonBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"CalendarDatePickerBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"TimePickerBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"DatePickerBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"ToggleSwitchOuterBorderStrokeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"RepeatButtonBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"SearchBoxBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"ToggleButtonBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"TextControlBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"ButtonRevealBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"RepeatButtonRevealBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"ToggleButtonRevealBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"AppBarEllipsisButtonRevealBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"AppBarButtonRevealBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"AppBarToggleButtonRevealBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"ListViewItemRevealBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"GridViewItemRevealBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+            sb.AppendLine(string.Format("                    <Thickness x:Key=\"ComboBoxItemRevealBorderThemeThickness\">{0},{1},{2},{3}</Thickness>", viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top, viewModel.ControlBorderThicknessValue.Right, viewModel.ControlBorderThicknessValue.Bottom));
+
+            sb.AppendLine(string.Format("                    <x:Double x:Key=\"PersonPictureEllipseBadgeStrokeThickness\">{0}</x:Double>", Math.Max(Math.Max(Math.Max(viewModel.ControlBorderThicknessValue.Left,
+                viewModel.ControlBorderThicknessValue.Top), viewModel.ControlBorderThicknessValue.Right), viewModel.ControlBorderThicknessValue.Bottom)));
 
             sb.AppendLine("                    <!-- Override system generated accent colors -->");
             sb.AppendLine(string.Format("                    <Color x:Key=\"SystemAccentColorLight1\">{0}</Color>", model.LightPrimary.Palette[4].ActiveColor.ToString()));

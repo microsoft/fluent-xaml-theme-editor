@@ -26,11 +26,12 @@
             x:Uid="TestContentButtonsBlock"
             Margin="0,0,0,16"
             Style="{StaticResource BaseTextBlockStyle}" />
-        <Button x:Uid="TestContentEnabledButton" Margin="0,0,0,12" />
+        <Button x:Uid="TestContentEnabledButton" Margin="0,0,0,12" CornerRadius="{ThemeResource ControlCornerRadius}"/>
         <Button
             x:Uid="TestContentDisabledButton"
             Margin="0,0,0,12"
-            IsEnabled="False" />
+            IsEnabled="False"
+            CornerRadius="{ThemeResource ControlCornerRadius}"/>
         <ToggleButton x:Uid="TestContentToggleButton" Margin="0,0,0,12" />
         <ToggleButton
             x:Uid="TestContentToggledButton"
@@ -154,11 +155,6 @@
             <AppBarButton x:Uid="TestContentAppBarButton" />
         </CommandBar>
         <TextBlock
-            x:Uid="TestContentCalendarViewBlock"
-            Margin="0,0,0,16"
-            Style="{StaticResource BaseTextBlockStyle}" />
-        <CalendarView Margin="0,0,0,28" HorizontalAlignment="Stretch" />
-        <TextBlock
             x:Uid="TestContentDatePickerBlock"
             Margin="0,0,0,16"
             Style="{StaticResource BaseTextBlockStyle}" />
@@ -168,6 +164,17 @@
             Margin="0,0,0,16"
             Style="{StaticResource BaseTextBlockStyle}" />
         <TimePicker Margin="0,0,0,0" HorizontalAlignment="Stretch" />
+        <TextBlock
+            x:Uid="TestContentCalendarViewBlock"
+            Margin="0,0,0,16"
+            Style="{StaticResource BaseTextBlockStyle}" />
+        <Grid HorizontalAlignment="Stretch" Height="120" Background="{ThemeResource SystemControlAcrylicWindowBrush}" Margin="0, 0, 0, 16" CornerRadius="{ThemeResource ControlCornerRadius}">
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="Base Acrylic" FontStyle="Italic" Margin="5"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" Height="120" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" Margin="0, 0, 0, 16" CornerRadius="{ThemeResource ControlCornerRadius}">
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="Primary Acrylic" FontStyle="Italic" Margin="5" RequestedTheme="Dark"/>
+        </Grid>
+        <CalendarView Margin="0,0,0,28" HorizontalAlignment="Stretch" BorderThickness="{ThemeResource DatePickerBorderThemeThickness}"/>        
 
     </StackPanel>
 </UserControl>

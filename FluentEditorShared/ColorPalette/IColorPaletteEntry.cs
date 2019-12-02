@@ -14,7 +14,11 @@ namespace FluentEditorShared.ColorPalette
         string Title { get; }
         string Description { get; }
 
-        Color ActiveColor { get; set; }
+        Color ActiveColor
+        {
+            get;
+            set;
+        }
         string ActiveColorString { get; }
         FluentEditorShared.Utils.ColorStringFormat ActiveColorStringFormat { get; }
 

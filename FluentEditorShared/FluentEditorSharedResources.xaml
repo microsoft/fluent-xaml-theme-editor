@@ -14,13 +14,39 @@
             <SolidColorBrush x:Key="PaletteEditorDividerBrush" Color="#FF424242" />
             <SolidColorBrush x:Key="PaletteEntryEditorBorderBrush" Color="Transparent" />
             <Thickness x:Key="PaletteEntryEditorBorderThickness">0 0 0 0</Thickness>
+            <Thickness x:Key="ControlPreviewBorderThickness">0</Thickness>
+            
+            <Color x:Key="SystemChromeAltHighColor">#FF1C1C1C</Color>
+            <Color x:Key="SystemChromeMediumColor">#FF1C1C1C</Color>
+
+            <SolidColorBrush x:Key="OverlayBackgroundBrush" Color="#25FFFFFF"/>           
+            
+            <!--<AcrylicBrush x:Key="SystemControlTransientBackgroundBrush" BackgroundSource="HostBackdrop" TintColor="{ThemeResource SystemChromeAltHighColor_Dark}" TintOpacity="0.8" FallbackColor="{ThemeResource SystemChromeMediumColor_Dark}" />-->
+            <AcrylicBrush x:Key="TimePickerFlyoutPresenterBackground" BackgroundSource="Backdrop" TintColor="{ThemeResource SystemChromeAltHighColor_Dark}" TintOpacity="0.8" FallbackColor="{ThemeResource SystemChromeMediumColor_Dark}" />
+            <AcrylicBrush x:Key="DatePickerFlyoutPresenterBackground" BackgroundSource="Backdrop" TintColor="{ThemeResource SystemChromeAltHighColor_Dark}" TintOpacity="0.8" FallbackColor="{ThemeResource SystemChromeMediumColor_Dark}" />
+            <AcrylicBrush x:Key="ComboBoxDropDownBackground" BackgroundSource="HostBackdrop" TintColor="{ThemeResource SystemChromeAltHighColor_Dark}" TintOpacity="0.8" FallbackColor="{ThemeResource SystemChromeMediumColor_Dark}" />
+            <AcrylicBrush x:Key="SystemControlAcrylicWindowBrush" BackgroundSource="HostBackdrop" TintColor="{ThemeResource SystemChromeAltHighColor_Dark}" TintOpacity="0.8" FallbackColor="{ThemeResource SystemChromeMediumColor_Dark}" />
         </ResourceDictionary>
         <ResourceDictionary x:Key="Light">
             <SolidColorBrush x:Key="PaletteEditorDividerBrush" Color="#FF424242" />
             <SolidColorBrush x:Key="PaletteEntryEditorBorderBrush" Color="Transparent" />
             <Thickness x:Key="PaletteEntryEditorBorderThickness">0 0 0 0</Thickness>
+            <Thickness x:Key="ControlPreviewBorderThickness">0</Thickness>
+
+            <SolidColorBrush x:Key="OverlayBackgroundBrush" Color="White" />
+
+            <Color x:Key="SystemChromeAltHighColor">#FFFFFFFF</Color>
+            <Color x:Key="SystemChromeMediumColor">#FFFFFFFF</Color>
+
+            <AcrylicBrush x:Key="TimePickerFlyoutPresenterBackground" BackgroundSource="Backdrop" TintColor="{ThemeResource SystemChromeAltHighColor}" TintOpacity="0.8" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
+            <AcrylicBrush x:Key="DatePickerFlyoutPresenterBackground" BackgroundSource="Backdrop" TintColor="{ThemeResource SystemChromeAltHighColor}" TintOpacity="0.8" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
+            <AcrylicBrush x:Key="ComboBoxDropDownBackground" BackgroundSource="HostBackdrop" TintColor="{ThemeResource SystemChromeAltHighColor}" TintOpacity="0.8" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
+            <AcrylicBrush x:Key="SystemControlAcrylicWindowBrush" BackgroundSource="HostBackdrop" TintColor="{ThemeResource SystemChromeAltHighColor}" TintOpacity="0.8" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
         </ResourceDictionary>
         <ResourceDictionary x:Key="HighContrast">
+            <SolidColorBrush x:Key="OverlayBackgroundBrush" Color="Transparent" />
+            <Thickness x:Key="ControlPreviewBorderThickness">1, 1, 1, 1 </Thickness>
+            <StaticResource x:Key="OverlayPreviewBorderBrush" ResourceKey="{ThemeResource ButtonBorderThemeBrush}"/>
             <SolidColorBrush x:Key="PaletteEditorDividerBrush" Color="#FF000000" />
             <SolidColorBrush x:Key="PaletteEntryEditorBorderBrush" Color="{ThemeResource SystemColorButtonTextColor}" />
             <Thickness x:Key="PaletteEntryEditorBorderThickness">1 1 1 1</Thickness>
@@ -29,6 +55,36 @@
 
     <local:ColorToStringConverter x:Key="ColorToStringConverter" />
     <local:NullableColorToStringConverter x:Key="NullableColorToStringConverter" />
+
+    <Color x:Key="SystemAccentColor">#ff0073CF</Color>
+    <Color x:Key="SystemChromeAltHighColor_Dark">#FF2B2B2B</Color>
+    <Color x:Key="SystemChromeMediumColor_Dark">#FF2B2B2B</Color>
+
+    <SolidColorBrush x:Key="ComboBoxItemRevealBackgroundSelectedPointerOver" Color="{ThemeResource SystemAccentColor}" Opacity="0.6"/>
+    <SolidColorBrush x:Key="ComboBoxItemRevealBackgroundSelected" Color="{ThemeResource SystemAccentColor}" Opacity="0.4"/>
+    <SolidColorBrush x:Key="ComboBoxItemRevealBackgroundSelectedPressed" Color="{ThemeResource SystemAccentColor}" Opacity="0.7" />
+
+    <SolidColorBrush x:Key="TimePickerFlyoutPresenterHighlightFill" Color="{ThemeResource SystemAccentColor}" Opacity="0.4"/>
+    <SolidColorBrush x:Key="DatePickerFlyoutPresenterHighlightFill" Color="{ThemeResource SystemAccentColor}" Opacity="0.4"/>
+
+    <SolidColorBrush x:Key="AccentButtonBackgroundPointerOver" Color="{ThemeResource SystemAccentColor}" Opacity="0.8"/>
+    <SolidColorBrush x:Key="AccentButtonBackgroundPressed" Color="{ThemeResource SystemAccentColor}" Opacity="0.6"/>
+    <SolidColorBrush x:Key="ToggleButtonBackgroundPointerOver" Color="{ThemeResource SystemAccentColor}" Opacity="0.8"/>
+    <SolidColorBrush x:Key="ToggleButtonBackgroundPressed" Color="{ThemeResource SystemAccentColor}" Opacity="0.6"/>
+    <SolidColorBrush x:Key="ToggleButtonBackgroundCheckedPointerOver" Color="{ThemeResource SystemAccentColor}" Opacity="0.8"/>
+    <SolidColorBrush x:Key="ToggleButtonBackgroundCheckedPressed" Color="{ThemeResource SystemAccentColor}" Opacity="0.6"/>
+    <AcrylicBrush x:Key="SystemControlAccentAcrylicWindowAccentMediumHighBrush" BackgroundSource="HostBackdrop" TintColor="{ThemeResource SystemAccentColor}" TintOpacity="0.8" FallbackColor="{ThemeResource SystemAccentColor}" />
+
+    <CornerRadius x:Key="ControlCornerRadius">2</CornerRadius>
+    <CornerRadius x:Key="OverlayCornerRadius">4</CornerRadius>
+
+    <Thickness x:Key="ComboBoxBorderThemeThickness">1</Thickness>
+    <Thickness x:Key="DatePickerBorderThemeThickness">1</Thickness>
+    <Thickness x:Key="TimePickerBorderThemeThickness">1</Thickness>
+    <Thickness x:Key="TextControlBorderThemeThickness">1</Thickness>
+    <Thickness x:Key="CheckBoxBorderThemeThickness">1</Thickness>
+    <Thickness x:Key="ToggleSwitchOuterBorderStrokeThickness">1</Thickness>
+    <Thickness x:Key="RadioButtonBorderThemeThickness">1</Thickness>
 
     <Style x:Key="HitboxButton" TargetType="Button">
         <Setter Property="Background" Value="Transparent" />
