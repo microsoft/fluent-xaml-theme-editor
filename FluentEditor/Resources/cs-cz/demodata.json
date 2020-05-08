@@ -1,0 +1,11 @@
+﻿{
+  "Demos": [
+    {
+      "Type": "ControlPalette",
+      "Id": "ControlPalette",
+      "Title": "Ukázka palety ovladacích prvků",
+      "Glyph": ""
+    }
+  ],
+  "DefaultDemoId": "ControlPalette"
+}
