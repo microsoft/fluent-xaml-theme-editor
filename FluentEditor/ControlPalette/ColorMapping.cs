@@ -55,6 +55,7 @@ namespace FluentEditor.ControlPalette
             {
                 retVal.Add(ColorMapping.Parse(node.GetObject(), lightRegion, darkRegion, lightBase, darkBase, lightPrimary, darkPrimary, white, black));
             }
+            
             return retVal;
         }
 
@@ -112,9 +113,8 @@ namespace FluentEditor.ControlPalette
                     if(_linkedElement != null)
                     {
                         if(_updateInProgress.ContainsKey(_linkedElement))
-                        {
                             _updateInProgress.Remove(_linkedElement);
-                        }
+                        
                         _linkedElement.Unloaded -= _linkedElement_Unloaded;
                     }
 
@@ -134,9 +134,8 @@ namespace FluentEditor.ControlPalette
                 if(_linkedElement != null)
                 {
                     if (_updateInProgress.ContainsKey(_linkedElement))
-                    {
                         _updateInProgress.Remove(_linkedElement);
-                    }
+                    
                     _linkedElement.Unloaded -= _linkedElement_Unloaded;
                     _linkedElement = null;
                 }
@@ -149,20 +148,15 @@ namespace FluentEditor.ControlPalette
             lock (_linkMapLock)
             {
                 if(_linkedElement == null)
-                {
                     return;
-                }
+                
                 element = _linkedElement;
                 if (_updateInProgress.ContainsKey(element))
                 {
                     if (_updateInProgress[element])
-                    {
                         return;
-                    }
-                    else
-                    {
-                        _updateInProgress[element] = true;
-                    }
+                    
+                    _updateInProgress[element] = true;
                 }
                 else
                 {
@@ -192,9 +186,7 @@ namespace FluentEditor.ControlPalette
                 lock (_linkMapLock)
                 {
                     if (_updateInProgress.ContainsKey(element))
-                    {
                         _updateInProgress[element] = false;
-                    }
                 }
             });
         }
@@ -208,9 +200,7 @@ namespace FluentEditor.ControlPalette
         private void UpdateAcrylicSurfaceVisual()
         {
             if (_targetResources == null || _targetResources.BaseLow == null || _targetResources.ChromeMediumLow == null)
-            {
                 return;
-            }
 
             App.Current.Resources["SystemAccentColor"] = _targetResources.Accent;
 
@@ -230,10 +220,8 @@ namespace FluentEditor.ControlPalette
         private bool IsSettingDarkColors(string title, string themeType)
         {
             string[] splitTitle = title.Split(new string[] { themeType }, StringSplitOptions.None);
-
-            if (splitTitle[0] == "")
-                return true;
-            return false;
+            
+            return splitTitle[0] == "";
         }
 
         public void Dispose()
@@ -244,9 +232,8 @@ namespace FluentEditor.ControlPalette
         public void Apply()
         {
             if (_targetResources == null)
-            {
                 return;
-            }
+            
             switch (_targetColor)
             {
                 case ColorTarget.Accent:
