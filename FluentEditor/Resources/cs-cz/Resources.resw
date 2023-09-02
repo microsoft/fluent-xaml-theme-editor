@@ -118,43 +118,46 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppDescription" xml:space="preserve">
-    <value>A tool that helps demonstrate the flexibility of the Fluent Design System as well as supports the app development process by generating XAML markup for our ResourceDictionary framework used in Universal Windows Platform (UWP) applications</value>
+    <value>Nástroj demonstruje Fluent Design System, jeho flexibilitu a umožňuje zjednodušit vývoj aplikací generováním definic stylu v jazyce XAML pro použití v aplikacích pro Univerzální platformu Windows (UWP).</value>
   </data>
   <data name="AppDisplayName" xml:space="preserve">
     <value>Fluent XAML Theme Editor</value>
   </data>
   <data name="ApplyButtonText.Content" xml:space="preserve">
-    <value>Apply</value>
+    <value>Použít</value>
+  </data>
+  <data name="BaseAcrylicTextBlock.Text" xml:space="preserve">
+    <value>Základní acrylic</value>
   </data>
   <data name="CancelButtonPreviewText.Text" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Zrušit</value>
   </data>
   <data name="ColorFlyoutMappingDescription" xml:space="preserve">
-    <value>Maps to {0}</value>
+    <value>Mapuje na {0}</value>
   </data>
   <data name="ComboboxShapePresetsHeader.Header" xml:space="preserve">
-    <value>Shape Presets</value>
+    <value>Přednastavené tvary</value>
   </data>
   <data name="ControlBorderThicknessPreview.Text" xml:space="preserve">
-    <value>Border Preview</value>
+    <value>Náhled okraje</value>
   </data>
   <data name="ControlBorderThicknessSectionHeader.Text" xml:space="preserve">
-    <value>Border Thickness</value>
+    <value>Tloušťka okraje</value>
   </data>
   <data name="ControlCornerRadiusPreview.Text" xml:space="preserve">
-    <value>Control Preview</value>
+    <value>Náhled prvku</value>
   </data>
   <data name="ControlPaletteBaseBlock.Text" xml:space="preserve">
-    <value>Base</value>
+    <value>Základ</value>
   </data>
   <data name="ControlPaletteDarkTestContent.Title" xml:space="preserve">
-    <value>Dark theme</value>
+    <value>Tmavý motiv</value>
   </data>
   <data name="ControlPaletteDarkThemeBlock.Text" xml:space="preserve">
-    <value>Dark theme</value>
+    <value>Tmavý motiv</value>
   </data>
   <data name="ControlPaletteDataPath" xml:space="preserve">
-    <value>ms-appx:///Resources/en-us/controlPaletteData.json</value>
+    <value>ms-appx:///Resources/cs-cz/controlPaletteData.json</value>
   </data>
   <data name="ControlPaletteErrorOkButtonCaption" xml:space="preserve">
     <value>Ok</value>
@@ -163,154 +166,157 @@
     <value>Export</value>
   </data>
   <data name="ControlPaletteInspectorHeader.Content" xml:space="preserve">
-    <value>Color</value>
+    <value>Barva</value>
   </data>
   <data name="ControlPaletteLightTestContent.Title" xml:space="preserve">
-    <value>Light theme</value>
+    <value>Světlý motiv</value>
   </data>
   <data name="ControlPaletteLightThemeBlock.Text" xml:space="preserve">
-    <value>Light theme</value>
+    <value>Světlý motiv</value>
   </data>
   <data name="ControlPaletteLoadButton.Content" xml:space="preserve">
-    <value>Load</value>
+    <value>Načíst</value>
   </data>
   <data name="ControlPaletteLoadError" xml:space="preserve">
-    <value>Unable to load file {0}</value>
+    <value>Nelze načíst soubor {0}</value>
   </data>
   <data name="ControlPaletteLoadErrorTitle" xml:space="preserve">
-    <value>Unable to load</value>
+    <value>Nelze načíst</value>
   </data>
   <data name="ControlPalettePresetCombo.Header" xml:space="preserve">
-    <value>Color Presets</value>
+    <value>Barevná schémata</value>
   </data>
   <data name="ControlPalettePresetCombo.PlaceholderText" xml:space="preserve">
-    <value>Custom</value>
+    <value>Vlastní</value>
   </data>
   <data name="ControlPalettePrimaryBlock.Text" xml:space="preserve">
-    <value>Primary</value>
+    <value>Primární</value>
   </data>
   <data name="ControlPaletteRegionBlock.Text" xml:space="preserve">
-    <value>Region</value>
+    <value>Oblast</value>
   </data>
   <data name="ControlPaletteResetButton.Content" xml:space="preserve">
-    <value>Reset colors</value>
+    <value>Výchozí barvy</value>
   </data>
   <data name="ControlPaletteSaveButton.Content" xml:space="preserve">
-    <value>Save</value>
+    <value>Uložit</value>
   </data>
   <data name="ControlPaletteSaveError" xml:space="preserve">
-    <value>Unable to save file {0}</value>
+    <value>Nelze uložit soubor {0}</value>
   </data>
   <data name="ControlPaletteSaveErrorTitle" xml:space="preserve">
-    <value>Unable to save</value>
+    <value>Nelze uložit</value>
   </data>
   <data name="ControlsCornerRadiusSliderHeader.Text" xml:space="preserve">
-    <value>Controls</value>
+    <value>Ovladací prvky</value>
   </data>
   <data name="CornerRadiusSectionHeader.Text" xml:space="preserve">
-    <value>Corner Radius</value>
+    <value>Zaoblení rohů</value>
   </data>
   <data name="DarkThemeTextContrastTitle" xml:space="preserve">
-    <value>White Text</value>
+    <value>Bílý text</value>
   </data>
   <data name="DefaultItemText.Text" xml:space="preserve">
-    <value>Default</value>
+    <value>Výchozí</value>
   </data>
   <data name="ExportCopyButton.Content" xml:space="preserve">
-    <value>Copy to Clipboard</value>
+    <value>Zkopírovat do schránky</value>
   </data>
   <data name="ExportLearnMoreButton.Content" xml:space="preserve">
-    <value>Learn more about XAML ResourceDictionary</value>
+    <value>Více of XAML ResourceDictionary</value>
   </data>
   <data name="ExportLearnMoreButton.NavigateUri" xml:space="preserve">
-    <value>https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references</value>
+    <value>https://docs.microsoft.com/cs-cz/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references</value>
   </data>
   <data name="LightThemeTextContrastTitle" xml:space="preserve">
-    <value>Black Text</value>
+    <value>Černý text</value>
   </data>
   <data name="MainDataPath" xml:space="preserve">
-    <value>ms-appx:///Resources/en-us/demodata.json</value>
+    <value>ms-appx:///Resources/cs-cz/demodata.json</value>
   </data>
   <data name="OKButtonPreviewText.Text" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="OverlayCornerRadiusHeader.Text" xml:space="preserve">
-    <value>Overlay</value>
+    <value>Popup</value>
   </data>
   <data name="OverlayCornerRadiusPreview.Text" xml:space="preserve">
-    <value>Overlay Preview</value>
+    <value>Náhled popupu</value>
   </data>
   <data name="PreFluent.Text" xml:space="preserve">
-    <value>No Rounding, Thicker Borders</value>
+    <value>Žádné zaoblení, širší okraje</value>
+  </data>
+  <data name="PrimaryAcrylicTextBlock.Text" xml:space="preserve">
+    <value>Primární acrylic</value>
   </data>
   <data name="TestContentAppBarButton.Content" xml:space="preserve">
     <value>Yolo</value>
   </data>
   <data name="TestContentButtonsBlock.Text" xml:space="preserve">
-    <value>Buttons</value>
+    <value>Tlačítka</value>
   </data>
   <data name="TestContentCalendarViewBlock.Text" xml:space="preserve">
-    <value>Calendar view</value>
+    <value>Kalendář</value>
   </data>
   <data name="TestContentCheckboxBlock.Text" xml:space="preserve">
-    <value>Checkbox</value>
+    <value>Zaškrtávací políčko</value>
   </data>
   <data name="TestContentCheckedCheckbox.Content" xml:space="preserve">
-    <value>Checked</value>
+    <value>Vybrán</value>
   </data>
   <data name="TestContentCheckedRadio.Content" xml:space="preserve">
-    <value>Checked</value>
+    <value>Vybrán</value>
   </data>
   <data name="TestContentComboBlock.Text" xml:space="preserve">
-    <value>Combo box</value>
+    <value>Pole seznamu</value>
   </data>
   <data name="TestContentComboItem1.Content" xml:space="preserve">
-    <value>Item 1</value>
+    <value>Položka 1</value>
   </data>
   <data name="TestContentComboItem2.Content" xml:space="preserve">
-    <value>Item 2</value>
+    <value>Položka 2</value>
   </data>
   <data name="TestContentComboItem3.Content" xml:space="preserve">
-    <value>Item 3</value>
+    <value>Položka 3</value>
   </data>
   <data name="TestContentCommandBarBlock.Text" xml:space="preserve">
-    <value>Command bar</value>
+    <value>Panel nástrojů</value>
   </data>
   <data name="TestContentDatePickerBlock.Text" xml:space="preserve">
-    <value>Date picker</value>
+    <value>Výběr data</value>
   </data>
   <data name="TestContentDisabledAccentButton.Content" xml:space="preserve">
-    <value>Disabled accent button</value>
+    <value>Zakázané tlačítko motivu</value>
   </data>
   <data name="TestContentDisabledButton.Content" xml:space="preserve">
-    <value>Disabled button</value>
+    <value>Zakázané tlačítko</value>
   </data>
   <data name="TestContentDisabledCheckbox.Content" xml:space="preserve">
-    <value>Disabled</value>
+    <value>Zakázané</value>
   </data>
   <data name="TestContentDisabledRadio.Content" xml:space="preserve">
-    <value>Disabled</value>
+    <value>Zakázané</value>
   </data>
   <data name="TestContentEditableComboItem1.Content" xml:space="preserve">
-    <value>Editable item 1</value>
+    <value>Editovatelná položka 1</value>
   </data>
   <data name="TestContentEditableComboItem2.Content" xml:space="preserve">
-    <value>Editable item 2</value>
+    <value>Editovatelná položka 2</value>
   </data>
   <data name="TestContentEditableComboItem3.Content" xml:space="preserve">
-    <value>Editable item 3</value>
+    <value>Editovatelná položka 3</value>
   </data>
   <data name="TestContentEnabledAccentButton.Content" xml:space="preserve">
-    <value>Enabled accent button</value>
+    <value>Povolené tlačítko motivu</value>
   </data>
   <data name="TestContentEnabledButton.Content" xml:space="preserve">
-    <value>Enabled button</value>
+    <value>Povolené tlačítko</value>
   </data>
   <data name="TestContentListviewBlock.Text" xml:space="preserve">
-    <value>List view</value>
+    <value>Seznam</value>
   </data>
   <data name="TestContentListviewItem1.Content" xml:space="preserve">
-    <value>Howdy! (disabled)</value>
+    <value>Ahoj! (disabled)</value>
   </data>
   <data name="TestContentListviewItem2.Content" xml:space="preserve">
     <value>Aloha! (selected)</value>
@@ -322,42 +328,36 @@
     <value>Hola!</value>
   </data>
   <data name="TestContentRadioBlock.Text" xml:space="preserve">
-    <value>Radio button</value>
+    <value>Přepínač</value>
   </data>
   <data name="TestContentSliderBlock.Text" xml:space="preserve">
-    <value>Slider</value>
+    <value>Jezdec</value>
   </data>
   <data name="TestContentTextbox.PlaceholderText" xml:space="preserve">
-    <value>Enter text here</value>
+    <value>Zadejte text</value>
   </data>
   <data name="TestContentTextboxBlock.Text" xml:space="preserve">
-    <value>Textbox</value>
+    <value>Textové pole</value>
   </data>
   <data name="TestContentThirdStateCheckbox.Content" xml:space="preserve">
-    <value>Third state</value>
+    <value>Třetí stav</value>
   </data>
   <data name="TestContentTimePickerBlock.Text" xml:space="preserve">
-    <value>Time picker</value>
+    <value>Výběr času</value>
   </data>
   <data name="TestContentToggleBlock.Text" xml:space="preserve">
-    <value>Toggle switch</value>
+    <value>Posunovací přepínač</value>
   </data>
   <data name="TestContentToggleButton.Content" xml:space="preserve">
-    <value>Toggle button</value>
+    <value>Přepnutelné tlačítko</value>
   </data>
   <data name="TestContentToggledButton.Content" xml:space="preserve">
-    <value>Toggled button</value>
+    <value>Přepnuté tlačítko</value>
   </data>
   <data name="TestContentUncheckedCheckbox.Content" xml:space="preserve">
-    <value>Unchecked</value>
+    <value>Nevybrán</value>
   </data>
   <data name="TestContentUncheckedRadio.Content" xml:space="preserve">
-    <value>Unchecked</value>
-  </data>
-  <data name="BaseAcrylicTextBlock.Text" xml:space="preserve">
-    <value>Base Acrylic</value>
-  </data>
-  <data name="PrimaryAcrylicTextBlock.Text" xml:space="preserve">
-    <value>Primary Acrylic</value>
+    <value>Nevybrán</value>
   </data>
 </root>
